@@ -11,6 +11,7 @@ class WebServerExpress {
         const wss = new WebSocket.Server({ server });
 
         wss.on('connection', (ws: WebSocket) => {
+            console.log('new connection');
             ws.on('message', (message: string) => {
                 console.log('received: %s', message);
                 ws.send(`Hello, you sent -> ${message}`);

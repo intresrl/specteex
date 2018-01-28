@@ -28,7 +28,6 @@ export class LoginComponent {
   public doLogin() {
     if (this.loginForm.valid) {
       this.dataService.loginUser(this.loginForm.value);
-      console.log('User: ' + JSON.stringify(this.loginForm.value));
     }
   }
 

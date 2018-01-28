@@ -1,5 +1,5 @@
 <div id="login">
-  <form [formGroup]="loginForm" (ngSubmit)="doLogin()">
+  <form [formGroup]="loginForm" (submit)="doLogin()">
     <mat-form-field class="form-item">
       <input matInput placeholder="Nick" type="text" formControlName="nick" [errorStateMatcher]="matcher">
       <mat-error *ngIf="loginForm.controls['nick'].hasError('required')">

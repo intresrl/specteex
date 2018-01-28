@@ -9,6 +9,7 @@ import {LoginComponent} from './component/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
 import {DataService} from './service/data.service';
+import {WebSocketService} from './service/websocket.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,10 @@ import {DataService} from './service/data.service';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+    WebSocketService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
