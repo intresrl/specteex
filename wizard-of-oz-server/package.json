@@ -1,0 +1,26 @@
+{
+  "name": "wizard-of-oz-server",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "homepage": "",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Gianni Bombelli",
+    "email": "bombelli@intre.it"
+  },
+  "contributors": [
+    {
+      "name": "Emanuele Mantovani",
+      "email": "mantovani@intre.it"
+    }
+  ],
+  "main": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
