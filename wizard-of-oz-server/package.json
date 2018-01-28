@@ -15,12 +15,24 @@
       "email": "mantovani@intre.it"
     }
   ],
-  "main": "",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": ""
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "tsc --watch & nodemon dist",
+    "tsc": "tsc"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.11",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.0",
+    "@types/ws": "^4.0.0",
+    "typescript": "^2.6.2"
   }
 }
