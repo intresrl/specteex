@@ -1,0 +1,19 @@
+#login {
+  text-align: center;
+
+  form {
+    display: inline-block;
+    min-width: 150px;
+    max-width: 500px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .form-item {
+    width: 100%;
+  }
+
+  .button-bar {
+    text-align: right;
+  }
+}
