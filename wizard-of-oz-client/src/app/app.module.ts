@@ -8,6 +8,7 @@ import {HomeComponent} from './component/home/home.component';
 import {LoginComponent} from './component/login/login.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {AppRoutingModule} from './app-routing.module';
+import {DataService} from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {AppRoutingModule} from './app-routing.module';
     BrowserAnimationsModule,
     MaterialModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
