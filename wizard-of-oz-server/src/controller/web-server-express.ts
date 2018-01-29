@@ -2,6 +2,8 @@ import * as express from 'express';
 import * as http from 'http';
 import * as WebSocket from 'ws';
 
+import {User} from '../../../wizard-of-oz-common/class/user';
+
 class WebServerExpress {
     public server: any;
 
