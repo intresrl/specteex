@@ -1,2 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* html */
+
+html {
+  background-color: #eee;
+}
+
+
+/* sidebar */
+.sidebar {
+  width: 400px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  border-left: 1px solid #eee;
+  box-shadow: -3px -5px 9px #ddd;
+  z-index: 100;
+}
+
+.head_bar {
+  height: 70px;
+  border-bottom: 1px #eee solid;
+  display: block;
+}
+.logo {
+  color: #45C2FB;
+  line-height: 70px;
+  margin-left: 28px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+.menu_button {
+
+  height: 70px;
+  width: 70px;
+  float: right;
+  background-color: #45C2FB;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  right: 0px;
+  -webkit-mask:  url(./assets/images/hamburger.svg) no-repeat 50% 50%;
+  mask: url(./assets/images/hamburger.svg) no-repeat 50% 50%;
+
+
+}
+.menu_button:hover {
+  background-color: black;
+  cursor: pointer;
+
+
+}
+
+
+/* chat */
+.chat {
+  padding: 28px;
+}
+.message {
+  width: 100%;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  min-height: 1px;
+
+  background-image: url(./assets/images/voice.svg);
+  background-repeat: no-repeat;
+
+  background-position: bottom left;
+
+
+}
+
+
+.profile_image {
+  width: 44px;
+  height: 44px;
+  -webkit-order: -2;
+  -ms-flex-order: -2;
+  order: -2;
+  -webkit-flex: 0 0 44px;
+  -ms-flex: 0 0 44px;
+  flex: 0 0 44px;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  min-width: 44px;
+  overflow: auto;
+
+}
+
+.profile_image-spectee {
+
+  background-image: url(./assets/images/spectee.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.baloon {
+
+  background-color: #45C2FB;
+  right: 0px;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -webkit-align-self: stretch;
+  -ms-flex-item-align: stretch;
+  align-self: stretch;
+  overflow: auto;
+  position: relative;
+  margin-left: 30px;
+  border-radius: 6px;
+  padding: 12px;
+  color: #fff;
+
+}
+
+/* board */
+
+
+.board {
+  background-color: #eee;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 320px;
+  position: fixed;
+}
