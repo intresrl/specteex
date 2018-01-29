@@ -15,14 +15,14 @@ class WebServerExpress {
             ws.on('message', (message: string) => {
                 console.log('received: %s', message);
 
-                //broadcast
+                // broadcast
                 wss.clients.forEach(function each(client: WebSocket) {
                     if (client.readyState === WebSocket.OPEN) {
                         client.send(message);
                     }
                 });
 
-                //echo
+                // echo
                 // ws.send(`Hello, you sent -> ${message}`);
             });
 
@@ -33,4 +33,4 @@ class WebServerExpress {
     }
 }
 
-export default new WebServerExpress().server
+export default new WebServerExpress().server;

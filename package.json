@@ -1,0 +1,33 @@
+{
+  "name": "spectee",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "homepage": "",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Gianni Bombelli",
+    "email": "bombelli@intre.it"
+  },
+  "contributors": [
+    {
+      "name": "Emanuele Mantovani",
+      "email": "mantovani@intre.it"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "nodemon": "^1.14.11",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "1.6.6",
+    "stylelint": "^8.4.0",
+    "stylelint-config-standard": "^18.0.0",
+    "tslint": "^5.9.1"
+  }
+}

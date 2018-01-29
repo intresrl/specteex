@@ -19,9 +19,9 @@ export class AppRoutingModule {
   constructor(private router: Router, private dataService: DataService) {
     this.dataService.currentUser.subscribe(currentUser => {
       if (currentUser) {
-        this.router.navigate(['home'])
+        this.router.navigate(['home']);
       } else {
-        this.router.navigate(['login'])
+        this.router.navigate(['login']);
       }
     });
   }

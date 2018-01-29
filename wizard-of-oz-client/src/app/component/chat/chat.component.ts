@@ -4,7 +4,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subject} from 'rxjs/Subject';
 
 import {DataService} from '../../service/data.service';
-import {User} from '../../class/user';
+import {User} from '../../../../../wizard-of-oz-common/class/user';
 import {WebSocketService} from '../../service/websocket.service';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 

@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "no-empty-source": null,
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/^app-/"]
+    }]
+  }
+}

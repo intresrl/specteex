@@ -18,7 +18,7 @@ export class LoginComponent {
       Validators.required,
       Validators.email,
     ]),
-    isScrumMaster: new FormControl('')
+    isScrumMaster: new FormControl(false)
   });
 
   matcher = new CustomErrorStateMatcher();

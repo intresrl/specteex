@@ -23,8 +23,10 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
+    "lint": "npm run lint:ng && npm run lint:style",
+    "lint:ng": "ng lint",
+    "lint:style": "../node_modules/stylelint/bin/stylelint.js \"src/**/*.scss\" --syntax scss",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e"
   },
   "private": true,
