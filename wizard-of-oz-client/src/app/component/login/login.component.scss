@@ -3,14 +3,15 @@
 
   form {
     display: inline-block;
-    min-width: 150px;
-    max-width: 500px;
     text-align: left;
-    width: 100%;
-  }
 
-  .form-item {
-    width: 100%;
+    div {
+      padding: 8px;
+    }
+
+    span {
+      padding: 8px;
+    }
   }
 
   .button-bar {

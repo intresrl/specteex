@@ -1,0 +1,48 @@
+.sidebar {
+  width: 400px;
+  background-color: #fff;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  border-left: 1px solid #eee;
+  box-shadow: -3px -5px 9px #ddd;
+  z-index: 100;
+}
+
+.head_bar {
+  height: 70px;
+  border-bottom: 1px #eee solid;
+  display: block;
+}
+.logo {
+  color: #45C2FB;
+  line-height: 70px;
+  margin-left: 28px;
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+}
+.menu_button {
+
+  height: 70px;
+  width: 70px;
+  float: right;
+  background-color: #45C2FB;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  right: 0px;
+  -webkit-mask:  url(/assets/images/hamburger.svg) no-repeat 50% 50%;
+  mask: url(/assets/images/hamburger.svg) no-repeat 50% 50%;
+
+
+}
+.menu_button:hover {
+  background-color: black;
+  cursor: pointer;
+
+
+}

@@ -10,6 +10,8 @@ import {DataService} from './service/data.service';
 import {WebSocketService} from './service/websocket.service';
 import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CustomErrorStateMatcher} from './service/form.service';
+import {SidebarComponent} from './component/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     BoardComponent,
     ChatComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SidebarComponent
   ],
   imports: [
     AppRoutingModule,
@@ -28,6 +31,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
   ],
   providers: [
     DataService,
+    CustomErrorStateMatcher,
     WebSocketService
   ],
   bootstrap: [AppComponent]

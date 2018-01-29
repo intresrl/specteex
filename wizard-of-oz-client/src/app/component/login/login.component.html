@@ -1,28 +1,28 @@
 <div id="login">
   <form [formGroup]="loginForm" (submit)="doLogin()">
-    <!--<mat-form-field class="form-item">-->
-      <!--<input matInput placeholder="Nick" type="text" formControlName="nick" [errorStateMatcher]="matcher">-->
-      <!--<mat-error *ngIf="loginForm.controls['nick'].hasError('required')">-->
-        <!--Nick is <strong>required</strong>-->
-      <!--</mat-error>-->
-    <!--</mat-form-field>-->
+    <div>
+      <input placeholder="Nick" type="text" formControlName="nick">
+      <div *ngIf="loginForm.controls['nick'].hasError('required')">
+        Nick is <strong>required</strong>
+      </div>
+    </div>
 
-    <!--<mat-form-field class="form-item">-->
-      <!--<input matInput placeholder="Email" type="email" formControlName="email" [errorStateMatcher]="matcher">-->
-      <!--<mat-error *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">-->
-        <!--Please enter a valid email address-->
-      <!--</mat-error>-->
-      <!--<mat-error *ngIf="loginForm.controls['email'].hasError('required')">-->
-        <!--Email is <strong>required</strong>-->
-      <!--</mat-error>-->
-    <!--</mat-form-field>-->
+    <div>
+      <input placeholder="Email" type="email" formControlName="email">
+      <div *ngIf="loginForm.controls['email'].hasError('email') && !loginForm.controls['email'].hasError('required')">
+        Please enter a valid email address
+      </div>
+      <div *ngIf="loginForm.controls['email'].hasError('required')">
+        Email is <strong>required</strong>
+      </div>
+    </div>
 
-    <!--<div class="form-item">-->
-      <!--<mat-checkbox formControlName="isScrumMaster">I'm the Scrum master!</mat-checkbox>-->
-    <!--</div>-->
+    <div>
+      <input type="checkbox" formControlName="isScrumMaster"><span>I'm the Scrum master!</span>
+    </div>
 
-    <!--<div class="button-bar">-->
-      <!--<button mat-raised-button type="submit">Login</button>-->
-    <!--</div>-->
+    <div class="button-bar">
+      <button type="submit">Login</button>
+    </div>
   </form>
 </div>

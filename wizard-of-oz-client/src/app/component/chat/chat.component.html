@@ -1,18 +1,36 @@
+<div class="chat">
+  <!-- message -->
+  <div class="message">
+    <div class="profile_image profile_image-spectee">
+
+    </div>
+    <!-- baloon -->
+    <div class="baloon">
+
+      <!-- baloon_text -->
+      <div class="baloon_text">
+        Hi !!!
+      </div>
+      <!-- End baloon_text -->
+
+    </div>
+    <!-- End baloon -->
+  </div>
+  <!-- End message -->
+</div>
+
 <div>
   {{currentUser.nick}} <{{currentUser.email}}>
 </div>
 
 <form [formGroup]="chatForm" (submit)="sendMessage()">
-  <!--<mat-form-field class="form-item">-->
-    <!--<input matInput placeholder="Message" type="text" formControlName="message" [errorStateMatcher]="matcher">-->
-    <!--<mat-error *ngIf="chatForm.controls['message'].hasError('required')">-->
-      <!--Message is <strong>required</strong>-->
-    <!--</mat-error>-->
-  <!--</mat-form-field>-->
+  <div>
+    <input placeholder="Message" type="text" formControlName="message">
+  </div>
 
-  <!--<div class="button-bar">-->
-    <!--<button mat-raised-button type="submit">Send</button>-->
-  <!--</div>-->
+  <div>
+    <button type="submit">Send</button>
+  </div>
 </form>
 
 <div>

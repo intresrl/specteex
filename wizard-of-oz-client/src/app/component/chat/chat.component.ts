@@ -37,7 +37,9 @@ export class ChatComponent {
   }
 
   public sendMessage() {
-    const messageEvent: MessageEvent = new MessageEvent('worker', {data: this.chatForm.value});
-    this.webSocket.next(messageEvent);
+    if (this.chatForm.valid) {
+      const messageEvent: MessageEvent = new MessageEvent('worker', {data: this.chatForm.value});
+      this.webSocket.next(messageEvent);
+    }
   }
 }
