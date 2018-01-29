@@ -14,7 +14,16 @@ class WebServerExpress {
             console.log('new connection');
             ws.on('message', (message: string) => {
                 console.log('received: %s', message);
-                ws.send(`Hello, you sent -> ${message}`);
+
+                //broadcast
+                wss.clients.forEach(function each(client: WebSocket) {
+                    if (client.readyState === WebSocket.OPEN) {
+                        client.send(message);
+                    }
+                });
+
+                //echo
+                // ws.send(`Hello, you sent -> ${message}`);
             });
 
             ws.send('Hi there, I am a WebSocket server');

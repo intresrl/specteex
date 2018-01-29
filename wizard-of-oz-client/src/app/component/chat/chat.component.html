@@ -1,6 +1,19 @@
-{{currentUser.nick}} <{{currentUser.email}}>
+<div>
+  {{currentUser.nick}} <{{currentUser.email}}>
+</div>
 
-<button mat-raised-button type="button" (click)="sendMessage()">Send</button>
+<form [formGroup]="chatForm" (submit)="sendMessage()">
+  <mat-form-field class="form-item">
+    <input matInput placeholder="Message" type="text" formControlName="message" [errorStateMatcher]="matcher">
+    <mat-error *ngIf="chatForm.controls['message'].hasError('required')">
+      Message is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <div class="button-bar">
+    <button mat-raised-button type="submit">Send</button>
+  </div>
+</form>
 
 <div>
   {{message}}

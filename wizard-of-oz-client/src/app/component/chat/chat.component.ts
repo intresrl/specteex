@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+
 import {Subject} from 'rxjs/Subject';
 
 import {DataService} from '../../service/data.service';
 import {User} from '../../class/user';
 import {WebSocketService} from '../../service/websocket.service';
+import {CustomErrorStateMatcher} from '../../service/form.service';
 
 @Component({
   selector: 'app-chat',
@@ -14,6 +17,14 @@ export class ChatComponent {
   private currentUser: User;
   private webSocket: Subject<MessageEvent>;
   public message: string;
+
+  chatForm = new FormGroup({
+    message: new FormControl('', [
+      Validators.required
+    ])
+  });
+
+  matcher = new CustomErrorStateMatcher();
 
   constructor(private dataService: DataService, private webSocketService: WebSocketService) {
     this.dataService.currentUser.subscribe(currentUser => {
@@ -26,8 +37,7 @@ export class ChatComponent {
   }
 
   public sendMessage() {
-    const message: string = 'Ciao server, io sono Gianni!';
-    const messageEvent: MessageEvent = new MessageEvent('worker', {data: message});
+    const messageEvent: MessageEvent = new MessageEvent('worker', {data: this.chatForm.value});
     this.webSocket.next(messageEvent);
   }
 }
