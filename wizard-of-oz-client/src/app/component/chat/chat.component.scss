@@ -1,6 +1,7 @@
 .chat {
   padding: 28px;
 }
+
 .message {
   width: 100%;
   display: -ms-flexbox;
@@ -21,18 +22,12 @@
   -webkit-align-items: flex-start;
   -ms-flex-align: start;
   align-items: flex-start;
-  width: 100%;
   height: 100%;
   min-height: 1px;
-
   background-image: url(/assets/images/voice.svg);
   background-repeat: no-repeat;
-
   background-position: bottom left;
-
-
 }
-
 
 .profile_image {
   width: 44px;
@@ -48,20 +43,17 @@
   align-self: stretch;
   min-width: 44px;
   overflow: auto;
-
 }
 
 .profile_image-spectee {
-
   background-image: url(/assets/images/spectee.svg);
   background-position: center center;
   background-repeat: no-repeat;
 }
 
 .baloon {
-
-  background-color: #45C2FB;
-  right: 0px;
+  background-color: #45c2fb;
+  right: 0;
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
@@ -77,5 +69,4 @@
   border-radius: 6px;
   padding: 12px;
   color: #fff;
-
 }
