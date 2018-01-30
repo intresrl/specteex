@@ -12,11 +12,13 @@ import {CommonModule} from '@angular/common';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CustomErrorStateMatcher} from './service/form.service';
 import {SidebarComponent} from './component/sidebar/sidebar.component';
+import {BoardBlockComponent} from './component/board-block/board-block.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BoardComponent,
+    BoardBlockComponent,
     ChatComponent,
     HomeComponent,
     LoginComponent,

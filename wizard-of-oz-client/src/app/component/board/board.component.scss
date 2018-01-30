@@ -3,6 +3,159 @@
   top: 0;
   bottom: 0;
   left: 0;
-  right: 320px;
+  right: 400px;
   position: fixed;
+  height: 100%;
+  width: auto !important;
+}
+
+.board_wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.board_block {
+  background-color: #fff;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.board_block:hover {
+  background-color: #fafafa;
+  border-right: 1px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+}
+
+.board_block_title {
+  height: 80px;
+  -webkit-flex: 0 0 80px;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  padding: 16px 20px 0 20px;
+  color: #4a6277;
+  opacity: 0.5;
+  font-weight: bold;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.board_block_content {
+  padding: 20px 16px;
+}
+
+.post_it {
+  display: inline-block;
+  padding: 8px 16px;
+  line-height: 22px;
+  min-height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  color: #fff;
+  margin: 6px 2px;
+  opacity: 0.9;
+  box-shadow: -3px -3px 9px #ddd;
+}
+
+.post_it:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.grid-item {
+  margin-right: 12px;
+}
+
+input {
+  font-size: 20px;
+  padding: 16px 0 4px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #cbd5de;
+  background-color: transparent;
+  color: #4a6277;
+}
+
+input:focus {
+  outline: none;
+  border-bottom: 2px solid #45c2fb;
+}
+
+.group {
+  height: 40px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #4a6277;
+  opacity: 0.4;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: #4a6277;
+  opacity: 0.4;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+  color: #4a6277;
+  opacity: 0.4;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #4a6277;
+  opacity: 0.4;
+}
+
+/* LABEL ======================================= */
+label {
+  color: #4a6277;
+  font-size: 20px;
+  font-weight: normal;
+  position: relative;
+  pointer-events: none;
+  left: 0;
+  top: -35px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label,
+input:valid ~ label {
+  top: -56px;
+  font-size: 14px;
+  color: #4a6277;
+}
+
+.post_it--profile {
+  background-color: #ff9d96;
+  background-image: url(/assets/images/emanuele.png);
+
+  /* background-color: white; */
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  padding-left: 42px;
+  background-size: 32px 32px;
+}
+
+/* background color */
+.violet {
+  background-color: #c997fe;
+}
+
+.orange {
+  background-color: #ffc58c;
+}
+
+.pink {
+  background-color: #ffb6d2;
+}
+
+.yellow {
+  background-color: #ffe697;
+}
+
+.red {
+  background-color: #ff9d96;
 }

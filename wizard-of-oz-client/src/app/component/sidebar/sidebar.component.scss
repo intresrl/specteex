@@ -36,7 +36,9 @@
   right: 0;
   top: 0;
   -webkit-mask: url(/assets/images/hamburger.svg) no-repeat 50% 50%;
-  mask: url(/assets/images/hamburger.svg) no-repeat 50% 50%;
+  mask: url(/assets/images/hamburger.svg);
+  mask-repeat: no-repeat;
+  mask-position: 50%;
 }
 
 .menu_button:hover {

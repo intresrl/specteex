@@ -20,9 +20,13 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "../node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "assets/styles/flex-framework.css",
+        "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
