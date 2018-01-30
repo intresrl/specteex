@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {CustomErrorStateMatcher} from '../../service/form.service';
@@ -23,7 +23,8 @@ export class LoginComponent {
 
   matcher = new CustomErrorStateMatcher();
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {
+  }
 
   public doLogin() {
     if (this.loginForm.valid) {
