@@ -19,10 +19,6 @@
   <!-- End message -->
 </div>
 
-<div>
-  {{currentUser.nick}} <{{currentUser.email}}>
-</div>
-
 <form [formGroup]="chatForm" (submit)="sendMessage()">
   <div>
     <input placeholder="Message" type="text" formControlName="message">

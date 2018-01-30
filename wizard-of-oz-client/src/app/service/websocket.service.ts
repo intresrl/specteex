@@ -2,22 +2,25 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import {Subject} from 'rxjs/Subject';
-import {User} from '../../../../wizard-of-oz-common/class/user';
 
 Injectable();
-export class WebSocketService {
-  private socket: Subject<MessageEvent>;
 
-  public connect(url): Subject<MessageEvent> {
-    if (!this.socket) {
-      this.socket = this.build(url);
+export class WebSocketService {
+  private subject = new Subject<MessageEvent>();
+  private isWsConnected = false;
+
+  public connect(): Subject<MessageEvent> {
+    if (!this.isWsConnected) {
+      const wsSubject = this.build('ws://localhost:3000/');
+      wsSubject.subscribe((messageEvent: MessageEvent) => this.subject.next(messageEvent));
+      this.isWsConnected = true;
     }
-    return this.socket;
+    return this.subject;
   }
 
   private build(url): Subject<MessageEvent> {
     const ws = new WebSocket(url);
-    const observable = Observable.create(
+    const wsObservable = Observable.create(
       (obs: Observer<MessageEvent>) => {
         ws.onmessage = obs.next.bind(obs);
         ws.onerror = obs.error.bind(obs);
@@ -25,13 +28,13 @@ export class WebSocketService {
         return ws.close.bind(ws);
       }
     );
-    const observer = {
+    const wsObserver = {
       next: (messageEvent: MessageEvent) => {
         if (ws.readyState === WebSocket.OPEN) {
           ws.send(JSON.stringify(messageEvent.data));
         }
-      },
+      }
     };
-    return Subject.create(observer, observable);
+    return Subject.create(wsObserver, wsObservable);
   }
 }

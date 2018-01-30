@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 import {Subject} from 'rxjs/Subject';
 
-import {DataService} from '../../service/data.service';
-import {User} from '../../../../../wizard-of-oz-common/class/user';
 import {WebSocketService} from '../../service/websocket.service';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 
@@ -14,9 +12,10 @@ import {CustomErrorStateMatcher} from '../../service/form.service';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
-  private currentUser: User;
-  private webSocket: Subject<MessageEvent>;
-  public message: string;
+  @Input('webSocket')
+  private _webSocket: Subject<MessageEvent>;
+
+  public message = 'connecting ...';
 
   chatForm = new FormGroup({
     message: new FormControl('', [
@@ -26,20 +25,15 @@ export class ChatComponent {
 
   matcher = new CustomErrorStateMatcher();
 
-  constructor(private dataService: DataService, private webSocketService: WebSocketService) {
-    this.dataService.currentUser.subscribe(currentUser => {
-      if (currentUser) {
-        this.currentUser = currentUser;
-        this.webSocket = this.webSocketService.connect('ws://localhost:3000');
-        this.webSocket.subscribe(messageEvent => this.message = messageEvent.data);
-      }
-    });
+  constructor(private _webSocketService: WebSocketService) {
+    this._webSocket = this._webSocketService.connect();
+    this._webSocket.subscribe(messageEvent => this.message = messageEvent.data);
   }
 
   public sendMessage() {
     if (this.chatForm.valid) {
       const messageEvent: MessageEvent = new MessageEvent('worker', {data: this.chatForm.value});
-      this.webSocket.next(messageEvent);
+      this._webSocket.next(messageEvent);
     }
   }
 }
