@@ -12,7 +12,10 @@ import {CustomErrorStateMatcher} from '../../service/form.service';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
-  @Input('webSocket')
+  @Input()
+  set webSocket(value: Subject<MessageEvent>) {
+    this._webSocket = value;
+  }
   private _webSocket: Subject<MessageEvent>;
 
   public message = 'connecting ...';
