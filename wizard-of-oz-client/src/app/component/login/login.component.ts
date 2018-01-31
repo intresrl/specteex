@@ -11,10 +11,10 @@ import {DataService} from '../../service/data.service';
 })
 export class LoginComponent {
   loginForm = new FormGroup({
-    nick: new FormControl('', [
+    nick: new FormControl('a', [
       Validators.required
     ]),
-    email: new FormControl('', [
+    email: new FormControl('a@a', [
       Validators.required,
       Validators.email,
     ]),
