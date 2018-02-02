@@ -55,11 +55,24 @@
   margin: 6px 2px;
   opacity: 0.9;
   box-shadow: -3px -3px 9px #ddd;
+  position: relative;
 }
 
 .post_it:hover {
   opacity: 1;
   cursor: pointer;
+}
+
+.post_it_close {
+  position: absolute;
+  background-image: url(/assets/images/close.svg);
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
 }
 
 .grid-item {
