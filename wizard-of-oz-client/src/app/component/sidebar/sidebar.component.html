@@ -1,6 +1,6 @@
-<div class="sidebar">
+<div class="sidebar vertical-container">
   <!-- head_bar -->
-  <div class="head_bar">
+  <div class="head_bar fixed-panel">
     <!-- logo -->
     <div class="logo">
       Spectee
@@ -13,17 +13,11 @@
   </div>
   <!-- End head_bar -->
 
-  <app-chat></app-chat>
+  <app-chat class="chat fluid-panel" id="chat"></app-chat>
 
-  <!--<form [formGroup]="chatForm" (submit)="sendMessage()">-->
-  <!--<div>-->
-  <!--<input placeholder="Message" type="text" formControlName="message">-->
-  <!--</div>-->
-
-  <!--<div>-->
-  <!--<button type="submit">Send</button>-->
-  <!--</div>-->
-  <!--</form>-->
+  <form class="input_bar" [formGroup]="chatForm" (submit)="sendMessage()">
+      <input type="text" placeholder="Type to add" required>
+  </form>
 
   <!--<div>-->
   <!--{{message}}-->

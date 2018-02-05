@@ -16,6 +16,32 @@
   display: block;
 }
 
+.input_bar {
+  border-top: 1px #eee solid;
+  display: block;
+  height: 70px;
+  -webkit-flex: 0 0 70px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
+  width: 100%;
+  padding: 10px;
+}
+
+.input_bar input {
+  background-color: #eee;
+  border-radius: 25px;
+  height: 50px;
+  border: none;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.input_bar input:focus {
+  outline: none;
+  border-bottom: none !important;
+  background-color: #ddd;
+}
+
 .logo {
   color: #45c2fb;
   line-height: 70px;
@@ -44,4 +70,8 @@
 .menu_button:hover {
   background-color: black;
   cursor: pointer;
+}
+
+.chat {
+  padding: 28px;
 }
