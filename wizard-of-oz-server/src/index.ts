@@ -1,4 +1,4 @@
-import server from './controller/web-server-express';
+import server from './controller/web-server-express.controller';
 
 const port = process.env.PORT || 3000;
 
