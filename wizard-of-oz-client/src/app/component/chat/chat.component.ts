@@ -10,12 +10,15 @@ import {WebSocketService} from '../../service/websocket.service';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
+  private _messages = [];
   private _webSocket: Subject<MessageEvent>;
 
-  public message = 'connecting ...';
+  get messages(): any[] {
+    return this._messages;
+  }
 
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
-    this._webSocket.subscribe(messageEvent => this.message = messageEvent.data);
+    this._webSocket.subscribe(messageEvent => this._messages.push(messageEvent.data));
   }
 }

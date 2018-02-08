@@ -1,86 +1,18 @@
-<!-- message -->
-<div class="message">
-  <div class="profile_image profile_image-spectee">
+<ng-container *ngFor="let message of messages">
+  <div class="message">
+    <!--TODO: user image and manage alignement-->
+    <!--<div class="message message&#45;&#45;user">-->
 
-  </div>
-  <!-- baloon -->
-  <div class="baloon">
-
-    <!-- baloon_text -->
-    <div class="baloon_text">
-      Hi !!!
+    <div class="profile_image profile_image-spectee"></div>
+    <div class="baloon">
+      <div class="baloon_text">
+        {{message.message}}
+        <!--TODO: button list-->
+        <!--<br>-->
+        <!--<div class="chat_button">Lorem</div>-->
+        <!--<div class="chat_button">Lorem</div>-->
+        <!--<div class="chat_button">Lorem</div>-->
+      </div>
     </div>
-    <!-- End baloon_text -->
-
   </div>
-  <!-- End baloon -->
-</div>
-<!-- End message -->
-<!-- message -->
-<div class="message">
-  <div class="profile_image profile_image-spectee">
-
-  </div>
-  <!-- baloon -->
-  <div class="baloon">
-
-
-    <!-- baloon_text -->
-    <div class="baloon_text">
-      Hi !!!
-    </div>
-    <!-- End baloon_text -->
-
-  </div>
-  <!-- End baloon -->
-</div>
-<!-- End message -->
-<!-- message -->
-<div class="message">
-  <div class="profile_image profile_image-spectee">
-
-  </div>
-  <!-- baloon -->
-  <div class="baloon">
-
-    <!-- baloon_text -->
-    <div class="baloon_text">
-      Hi !!!
-      <br>
-      <div class="chat_button">Lorem</div>
-      <div class="chat_button">Lorem</div>
-      <div class="chat_button">Lorem</div>
-    </div>
-    <!-- End baloon_text -->
-
-
-  </div>
-  <!-- End baloon -->
-
-</div>
-<!-- End message -->
-<!-- message -->
-<div class="message message--user">
-
-  <!-- baloon -->
-  <div class="baloon">
-
-    <!-- baloon_text -->
-    <div class="baloon_text">
-      Hi !!!
-      <br>
-      <div class="chat_button">Lorem</div>
-      <div class="chat_button">Lorem</div>
-      <div class="chat_button">Lorem</div>
-    </div>
-    <!-- End baloon_text -->
-
-
-  </div>
-  <!-- End baloon -->
-  <div class="profile_image" style="background-image:url(/assets/images/emanuele.png)">
-
-  </div>
-
-</div>
-<!-- End message -->
+</ng-container>

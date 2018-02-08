@@ -1,6 +1,6 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { AppComponent } from './app.component';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {AppComponent} from './app.component';
 import {BoardComponent} from './component/board/board.component';
 import {ChatComponent} from './component/chat/chat.component';
 import {HomeComponent} from './component/home/home.component';
@@ -38,4 +38,5 @@ import {BoardBlockComponent} from './component/board-block/board-block.component
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

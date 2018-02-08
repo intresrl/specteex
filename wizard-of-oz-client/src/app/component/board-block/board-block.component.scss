@@ -1,0 +1,81 @@
+.board_block_title {
+  height: 80px;
+  -webkit-flex: 0 0 80px;
+  -ms-flex: 0 0 80px;
+  flex: 0 0 80px;
+  padding: 16px 20px 0 20px;
+  color: #4a6277;
+  opacity: 0.5;
+  font-weight: bold;
+  overflow: hidden;
+  line-height: 20px;
+}
+
+.board_block_content {
+  padding: 20px 16px;
+}
+
+.group {
+  height: 40px;
+}
+
+.post_it {
+  display: inline-block;
+  padding: 8px 16px;
+  line-height: 22px;
+  min-height: 40px;
+  font-size: 16px;
+  border-radius: 20px;
+  background-color: #f1f1f1;
+  color: #fff;
+  margin: 6px 2px;
+  opacity: 0.9;
+  box-shadow: -3px -3px 9px #ddd;
+  position: relative;
+
+  &.violet {
+    background-color: #c997fe;
+  }
+
+  &.orange {
+    background-color: #ffc58c;
+  }
+
+  &.pink {
+    background-color: #ffb6d2;
+  }
+
+  &.yellow {
+    background-color: #ffe697;
+  }
+
+  &.red {
+    background-color: #ff9d96;
+  }
+}
+
+.post_it:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.post_it_close {
+  position: absolute;
+  background-image: url(/assets/images/close.svg);
+  opacity: 1;
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+
+.post_it--profile {
+  //TODO: user image
+  background-image: url(/assets/images/emanuele.png);
+  background-repeat: no-repeat;
+  background-position: 4px 4px;
+  padding-left: 42px;
+  background-size: 32px 32px;
+}

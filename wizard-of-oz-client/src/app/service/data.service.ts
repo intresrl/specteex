@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
-import {User} from '../../../../wizard-of-oz-common/class/user';
+import {User} from '../../../../wizard-of-oz-common/src/class/user';
 
 @Injectable()
 export class DataService {
@@ -9,8 +9,8 @@ export class DataService {
 
   public readonly currentUser = this._currentUser.asObservable();
 
-  loginUser(user: User) {
-    this._currentUser.next(user);
+  loginUser(user: object) {
+    this._currentUser.next(User.build(user));
   }
 
 }

@@ -9,11 +9,19 @@ export class WebSocketService {
   private subject = new Subject<MessageEvent>();
   private isWsConnected = false;
 
+  public static buildWsMessage(data: Object): MessageEvent {
+    return new MessageEvent('worker', {data: data});
+  }
+
   public connect(): Subject<MessageEvent> {
     if (!this.isWsConnected) {
       const wsSubject = this.build('ws://localhost:3000/');
-      wsSubject.subscribe((messageEvent: MessageEvent) => this.subject.next(messageEvent));
+      wsSubject.subscribe((messageEvent: MessageEvent) => {
+        this.subject.next(messageEvent);
+      });
+
       this.isWsConnected = true;
+      // this.subject = wsSubject;
     }
     return this.subject;
   }

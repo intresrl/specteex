@@ -13,7 +13,10 @@
 .head_bar {
   height: 70px;
   border-bottom: 1px #eee solid;
-  display: block;
+  overflow: hidden;
+  -webkit-flex: 0 0 70px;
+  -ms-flex: 0 0 70px;
+  flex: 0 0 70px;
 }
 
 .input_bar {

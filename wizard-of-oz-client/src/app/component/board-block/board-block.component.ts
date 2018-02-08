@@ -1,4 +1,4 @@
-import {Component, Input, AfterViewInit} from '@angular/core';
+import {AfterViewInit, Component, Input} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 import PerfectScrollbar from 'perfect-scrollbar';
 
@@ -12,19 +12,23 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./board-block.component.scss']
 })
 export class BoardBlockComponent implements AfterViewInit {
+  private _blockNumber: number;
+  private _messages = [];
+  private _webSocket: Subject<MessageEvent>;
 
   get blockNumber(): number {
     return this._blockNumber;
   }
+
   @Input()
   set blockNumber(value: number) {
     this._blockNumber = value;
   }
-  private _blockNumber: number;
 
-  private _webSocket: Subject<MessageEvent>;
+  get messages(): any[] {
+    return this._messages;
+  }
 
-  public message = 'connecting ...';
   public ps: PerfectScrollbar;
 
   boardForm = new FormGroup({
@@ -37,7 +41,7 @@ export class BoardBlockComponent implements AfterViewInit {
 
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
-    this._webSocket.subscribe(messageEvent => this.message = messageEvent.data);
+    this._webSocket.subscribe(messageEvent => this._messages.push(messageEvent.data));
   }
 
   ngAfterViewInit(): void {
