@@ -1,0 +1,37 @@
+{
+  "name": "wizard-of-oz-common",
+  "description": "",
+  "version": "0.0.1",
+  "keywords": [],
+  "homepage": "",
+  "license": "GPL-3.0",
+  "author": {
+    "name": "Gianni Bombelli",
+    "email": "bombelli@intre.it"
+  },
+  "contributors": [
+    {
+      "name": "Emanuele Mantovani",
+      "email": "mantovani@intre.it"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {
+    "tsc": "tsc",
+    "clean": "rimraf dist/*",
+    "build": "tsc",
+    "lint": "npm run lint:ts",
+    "lint:ts": "../node_modules/tslint/bin/tslint --project '.'"
+  },
+  "dependencies": {
+    "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/uuid": "^3.4.3",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.6.2"
+  }
+}
