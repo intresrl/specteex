@@ -10,7 +10,7 @@ export class DataService {
   public readonly currentUser = this._currentUser.asObservable();
 
   loginUser(user: object) {
-    this._currentUser.next(User.build(user));
+    this._currentUser.next(User.buildFromObject(user));
   }
 
 }
