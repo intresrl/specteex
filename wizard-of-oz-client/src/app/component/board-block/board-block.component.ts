@@ -60,6 +60,7 @@ export class BoardBlockComponent implements AfterViewInit {
       const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.boardForm.value);
       const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
+      this.boardForm.reset();
     }
   }
 }

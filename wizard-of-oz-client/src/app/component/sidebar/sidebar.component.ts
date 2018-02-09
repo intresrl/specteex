@@ -38,6 +38,7 @@ export class SidebarComponent implements AfterViewInit {
       const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.chatForm.value);
       const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
+      this.chatForm.reset();
     }
   }
 }
