@@ -6,7 +6,8 @@ import {Subject} from 'rxjs/Subject';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 import {DataService} from '../../service/data.service';
 import {WebSocketService} from '../../service/websocket.service';
-import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/class/ws-message';
+import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
+import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Component({
   selector: 'app-login',
@@ -35,8 +36,8 @@ export class LoginComponent {
 
   public doLogin() {
     if (this.loginForm.valid) {
-      const user = WebSocketService.convertToPayload(wsPayloadEnum.User, this.loginForm.value);
-      const messageEvent = WebSocketService.buildMessageEvent(wsPayloadEnum.User, user);
+      const user = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.User, this.loginForm.value);
+      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.User, user);
       this._webSocket.next(messageEvent);
       this.dataService.loginUser(this.loginForm.value);
     }

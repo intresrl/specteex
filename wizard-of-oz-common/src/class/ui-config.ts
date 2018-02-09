@@ -1,4 +1,4 @@
-import {userUiConfigs} from './users-ui-config';
+import {userUiConfigs} from '../config/users-ui-config';
 
 export class UiConfig {
   color: string;

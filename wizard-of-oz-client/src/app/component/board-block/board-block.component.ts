@@ -5,6 +5,8 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import {WebSocketService} from '../../service/websocket.service';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
+import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Component({
   selector: 'app-board-block',
@@ -13,7 +15,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 })
 export class BoardBlockComponent implements AfterViewInit {
   private _blockNumber: number;
-  private _messages = [];
+  private _wsMessages = [];
   private _webSocket: Subject<MessageEvent>;
 
   get blockNumber(): number {
@@ -25,8 +27,8 @@ export class BoardBlockComponent implements AfterViewInit {
     this._blockNumber = value;
   }
 
-  get messages(): any[] {
-    return this._messages;
+  get wsMessages(): any[] {
+    return this._wsMessages;
   }
 
   public ps: PerfectScrollbar;
@@ -41,7 +43,12 @@ export class BoardBlockComponent implements AfterViewInit {
 
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
-    this._webSocket.subscribe(messageEvent => this._messages.push(messageEvent.data));
+    this._webSocket.subscribe(messageEvent => {
+      const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
+      if (wsMessage.payloadType === wsPayloadEnum.ChatMessage) {
+        this._wsMessages.push(wsMessage);
+      }
+    });
   }
 
   ngAfterViewInit(): void {
@@ -50,7 +57,8 @@ export class BoardBlockComponent implements AfterViewInit {
 
   public sendMessage() {
     if (this.boardForm.valid) {
-      const messageEvent: MessageEvent = new MessageEvent('worker', {data: this.boardForm.value});
+      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.boardForm.value);
+      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
     }
   }

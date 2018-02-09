@@ -1,32 +1,32 @@
 export const userUiConfigs = [
   {
     email: 'caglio@intre.it',
-    color: '',
+    color: '#c997fe',
     image: ''
   },
   {
     email: 'duque@intre.it',
-    color: 'red',
+    color: '#ff9d96',
     image: 'duq.png'
   },
   {
     email: 'marcato@intre.it',
-    color: '',
-    image: ''
+    color: '#ffc58c',
+    image: 'mar.png'
   },
   {
     email: 'ranica@intre.it',
-    color: '',
-    image: ''
+    color: '#ffb6d2',
+    image: 'ran.png'
   },
   {
     email: 'sacchi@intre.it',
-    color: '',
-    image: ''
+    color: '#ffe697',
+    image: 'sac.png'
   },
   {
     email: 'santacroce@intre.it',
     color: '',
-    image: ''
+    image: 'san.png'
   }
 ];

@@ -5,7 +5,8 @@ import {Subject} from 'rxjs/Subject';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import {WebSocketService} from '../../service/websocket.service';
-import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/class/ws-message';
+import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
+import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Component({
   selector: 'app-sidebar',
@@ -34,8 +35,8 @@ export class SidebarComponent implements AfterViewInit {
 
   public sendMessage() {
     if (this.chatForm.valid) {
-      const chatMessage = WebSocketService.convertToPayload(wsPayloadEnum.ChatMessage, this.chatForm.value);
-      const messageEvent = WebSocketService.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
+      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.chatForm.value);
+      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
     }
   }

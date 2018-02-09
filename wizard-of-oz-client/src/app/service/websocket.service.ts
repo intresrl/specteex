@@ -3,31 +3,11 @@ import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import {Subject} from 'rxjs/Subject';
 
-import {ChatMessage} from '../../../../wizard-of-oz-common/src/class/chat-message';
-import {User} from '../../../../wizard-of-oz-common/src/class/user';
-import {WsMessage, wsPayloadEnum} from '../../../../wizard-of-oz-common/src/class/ws-message';
-
 Injectable();
 
 export class WebSocketService {
   private subject = new Subject<MessageEvent>();
   private isWsConnected = false;
-
-  public static buildMessageEvent(payloadType: wsPayloadEnum, data: Object): MessageEvent {
-    const wsMessage = WsMessage.build('duque@intre.it', payloadType, data);
-    return new MessageEvent('worker', {data: wsMessage});
-  }
-
-  public static convertToPayload(payloadType: wsPayloadEnum, data: object): object {
-    switch (payloadType) {
-      case wsPayloadEnum.User:
-        return User.buildFromObject(data);
-      case wsPayloadEnum.ChatMessage:
-        return ChatMessage.buildFromObject(data);
-      default:
-        return data;
-    }
-  }
 
   public connect(): Subject<MessageEvent> {
     if (!this.isWsConnected) {

@@ -3,6 +3,8 @@ import {Component} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 
 import {WebSocketService} from '../../service/websocket.service';
+import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
+import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Component({
   selector: 'app-chat',
@@ -10,15 +12,20 @@ import {WebSocketService} from '../../service/websocket.service';
   styleUrls: ['./chat.component.scss']
 })
 export class ChatComponent {
-  private _messages = [];
+  private _wsMessages = [];
   private _webSocket: Subject<MessageEvent>;
 
-  get messages(): any[] {
-    return this._messages;
+  get wsMessages(): any[] {
+    return this._wsMessages;
   }
 
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
-    this._webSocket.subscribe(messageEvent => this._messages.push(messageEvent.data));
+    this._webSocket.subscribe(messageEvent => {
+      const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
+      if (wsMessage.payloadType === wsPayloadEnum.ChatMessage) {
+        this._wsMessages.push(wsMessage);
+      }
+    });
   }
 }

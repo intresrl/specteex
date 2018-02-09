@@ -12,10 +12,10 @@
 <div class="board_block_content fluid-panel " id="board_block_{{blockNumber}}"
      data-masonry='{ "columnWidth": 1, "itemSelector": "." }'>
 
-  <ng-container *ngFor="let message of messages">
+  <ng-container *ngFor="let wsMessage of wsMessages">
     <!--TODO: user color and user image-->
-    <div class="post_it red post_it--profile  ">
-      {{message.message}}
+    <div class="post_it red post_it--profile">
+      {{wsMessage.payload.message}}
       <!--TODO: close-->
       <!--<div class="post_it_close"></div>-->
     </div>

@@ -1,4 +1,4 @@
-<ng-container *ngFor="let message of messages">
+<ng-container *ngFor="let wsMessage of wsMessages">
   <div class="message">
     <!--TODO: user image and manage alignement-->
     <!--<div class="message message&#45;&#45;user">-->
@@ -6,7 +6,7 @@
     <div class="profile_image profile_image-spectee"></div>
     <div class="baloon">
       <div class="baloon_text">
-        {{message.message}}
+        {{wsMessage.payload.message}}
         <!--TODO: button list-->
         <!--<br>-->
         <!--<div class="chat_button">Lorem</div>-->
