@@ -1,4 +1,4 @@
-import {AfterViewInit, Component} from '@angular/core';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Subject} from 'rxjs/Subject';
@@ -13,20 +13,24 @@ import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payl
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
-export class SidebarComponent implements AfterViewInit {
+export class SidebarComponent implements AfterViewInit, OnInit {
   private _webSocket: Subject<MessageEvent>;
 
   public ps: PerfectScrollbar;
-  chatForm = new FormGroup({
-    message: new FormControl('', [
-      Validators.required
-    ])
-  });
+  chatForm: FormGroup;
 
   matcher = new CustomErrorStateMatcher();
 
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
+  }
+
+  ngOnInit(): void {
+    this.chatForm = new FormGroup({
+      message: new FormControl('', [
+        Validators.required
+      ])
+    });
   }
 
   ngAfterViewInit(): void {

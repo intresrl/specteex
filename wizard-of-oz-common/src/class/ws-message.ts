@@ -6,7 +6,7 @@ export class WsMessage {
   private _userId: string;
   private _timestamp: number;
   private _payloadType: wsPayloadEnum;
-  private _payload: object;
+  private _payload: any;
   private _rawPayload: any;
 
   get id(): string {
@@ -25,11 +25,11 @@ export class WsMessage {
     return this._payloadType;
   }
 
-  get payload(): object {
+  get payload(): any {
     return this._payload;
   }
 
-  set payload(value: object) {
+  set payload(value: any) {
     this._payload = value;
   }
 

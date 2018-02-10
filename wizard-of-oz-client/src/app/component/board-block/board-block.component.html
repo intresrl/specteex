@@ -1,5 +1,5 @@
 <div class="board_block_title fixed-panel">
-  Keep doing <br>
+  {{blockName}} <br>
   <form [formGroup]="boardForm" (submit)="sendMessage()" class="group">
     <div>
       <input type="text" placeholder="Type to add" formControlName="message">
