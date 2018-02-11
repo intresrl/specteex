@@ -1,7 +1,10 @@
+import {ChatMessageButton} from './chat-message-button';
+
 export class ChatMessage {
   public static readonly messageRegExp = new RegExp('^(#([\\w\\d]+):)?\\s?([\\w\\W]+)$');
   message: string;
   board?: string;
+  buttons?: ChatMessageButton[];
 
   public static buildFromObject(data: object): ChatMessage {
     const chatMessageData = data as ChatMessage;
@@ -10,6 +13,9 @@ export class ChatMessage {
     const board = chatMessageData.board ? chatMessageData.board : regExpMatches[2];
     chatMessage.board = board ? board.toLowerCase() : undefined;
     chatMessage.message = regExpMatches[3];
+    if (chatMessageData.buttons) {
+      chatMessage.buttons = ChatMessageButton.buildFromObject(chatMessageData.buttons);
+    }
     return chatMessage;
   }
 

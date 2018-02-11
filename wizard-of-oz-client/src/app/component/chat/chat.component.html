@@ -1,17 +1,22 @@
 <ng-container *ngFor="let wsMessage of wsMessages">
   <div class="message" [ngClass]="'spectee@intre.it' !== wsMessage.userEmail ? 'message--user' : ''">
 
-    <div *ngIf="'spectee@intre.it' === wsMessage.userEmail" class="profile_image" [style.background-image]="'url(/assets/images/' + wsMessage.userImage + ')'"></div>
+    <div *ngIf="'spectee@intre.it' === wsMessage.userEmail" class="profile_image"
+         [style.background-image]="'url(/assets/images/' + wsMessage.userImage + ')'"></div>
     <div class="baloon">
       <div class="baloon_text">
         {{wsMessage.payload.message}}
         <!--TODO: button list-->
-        <!--<br>-->
-        <!--<div class="chat_button">Lorem</div>-->
-        <!--<div class="chat_button">Lorem</div>-->
-        <!--<div class="chat_button">Lorem</div>-->
+        <br *ngIf="wsMessage.payload.buttons">
+        <ng-container *ngFor="let button of wsMessage.payload.buttons">
+          <!--TODO disable class-->
+          <div class="chat_button" [ngClass]="isEnabled ? '' : ''" (click)="clickButton(button.value)">
+            {{button.label}}
+          </div>
+        </ng-container>
       </div>
     </div>
-    <div *ngIf="'spectee@intre.it' !== wsMessage.userEmail" class="profile_image" [style.background-image]="'url(/assets/images/' + wsMessage.userImage + ')'"></div>
+    <div *ngIf="'spectee@intre.it' !== wsMessage.userEmail" class="profile_image"
+         [style.background-image]="'url(/assets/images/' + wsMessage.userImage + ')'"></div>
   </div>
 </ng-container>

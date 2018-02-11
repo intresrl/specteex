@@ -3,6 +3,7 @@ import {ChatMessage} from '../class/chat-message';
 import {User} from '../class/user';
 import {wsPayloadEnum} from '../enum/ws-payload.enum';
 import {RetrospectiveStatus} from '../enum/retrospective-status.enum';
+import {ClickButton} from '../class/click-button';
 
 export class WebSocketUtils {
 
@@ -23,6 +24,8 @@ export class WebSocketUtils {
         return User.buildFromObject(data) as User;
       case wsPayloadEnum.CHAT_MESSAGE:
         return ChatMessage.buildFromObject(data) as ChatMessage;
+      case wsPayloadEnum.CLICK_BUTTON:
+        return new ClickButton(data);
       case wsPayloadEnum.STATUS:
         return data as RetrospectiveStatus;
       default:
