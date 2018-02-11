@@ -6,10 +6,9 @@
     <div class="baloon">
       <div class="baloon_text">
         {{wsMessage.payload.message}}
-        <!--TODO: button list-->
         <br *ngIf="wsMessage.payload.buttons">
         <ng-container *ngFor="let button of wsMessage.payload.buttons">
-          <!--TODO disable class-->
+          <!--TODO disable button class-->
           <div class="chat_button" [ngClass]="isEnabled ? '' : ''" (click)="clickButton(button.value)">
             {{button.label}}
           </div>
