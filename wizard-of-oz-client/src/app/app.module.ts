@@ -13,6 +13,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CustomErrorStateMatcher} from './service/form.service';
 import {SidebarComponent} from './component/sidebar/sidebar.component';
 import {BoardBlockComponent} from './component/board-block/board-block.component';
+import {StatusService} from './service/status.service';
+import {DisableControlDirective} from './directive/disable-control.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,8 @@ import {BoardBlockComponent} from './component/board-block/board-block.component
     ChatComponent,
     HomeComponent,
     LoginComponent,
-    SidebarComponent
+    SidebarComponent,
+    DisableControlDirective
   ],
   imports: [
     AppRoutingModule,
@@ -32,8 +35,9 @@ import {BoardBlockComponent} from './component/board-block/board-block.component
     ReactiveFormsModule
   ],
   providers: [
-    DataService,
     CustomErrorStateMatcher,
+    DataService,
+    StatusService,
     WebSocketService
   ],
   bootstrap: [AppComponent]

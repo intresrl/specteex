@@ -1,4 +1,5 @@
 export enum wsPayloadEnum {
-  ChatMessage,
-  User
+  CHAT_MESSAGE,
+  USER,
+  STATUS
 }

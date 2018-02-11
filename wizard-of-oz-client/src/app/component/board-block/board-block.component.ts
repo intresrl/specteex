@@ -8,6 +8,8 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
+import {StatusService} from '../../service/status.service';
+import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 
 @Component({
   selector: 'app-board-block',
@@ -46,13 +48,20 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
 
   boardForm: FormGroup;
 
+  get isEnabled(): boolean {
+    const currentStatus = this._statusService.currentStatus;
+    return currentStatus === RetrospectiveStatus.WRITE_NOTE
+      || (this._dataService.currentUser.isScrumMaster
+        && currentStatus === RetrospectiveStatus.ADD_ACTION);
+  }
+
   matcher = new CustomErrorStateMatcher();
 
-  constructor(private _dataService: DataService, private _webSocketService: WebSocketService) {
+  constructor(private _dataService: DataService, private _webSocketService: WebSocketService, private _statusService: StatusService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
-      if (wsMessage.payloadType === wsPayloadEnum.ChatMessage && this.blockName.toLowerCase() === wsMessage.payload.board) {
+      if (wsMessage.payloadType === wsPayloadEnum.CHAT_MESSAGE && this.blockName.toLowerCase() === wsMessage.payload.board) {
         this._wsMessages.push(wsMessage);
       }
     });
@@ -73,8 +82,8 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
 
   public sendMessage() {
     if (this.boardForm.valid) {
-      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.boardForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.ChatMessage, chatMessage);
+      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.CHAT_MESSAGE, this.boardForm.value);
+      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.boardForm.reset({board: this.blockName});
     }

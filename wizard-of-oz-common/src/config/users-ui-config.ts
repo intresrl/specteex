@@ -1,7 +1,7 @@
 export const userUiConfigs = [
   {
     _email: 'spectee@intre.it',
-    _color: '#c997fe',
+    _color: '#45c2fb',
     _image: 'spectee.svg'
   },
   {
@@ -41,7 +41,7 @@ export const userUiConfigs = [
   },
   {
     _email: 'santacroce@intre.it',
-    _color: '',
+    _color: '#ff9d96',
     _image: 'san.png'
   }
 ];

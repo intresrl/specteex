@@ -16,7 +16,7 @@
   <app-chat class="chat fluid-panel" id="chat"></app-chat>
 
   <form class="input_bar" [formGroup]="chatForm" (submit)="sendMessage()">
-    <input type="text" placeholder="Type to add" formControlName="message">
+    <input type="text" placeholder="Type to add" formControlName="message" [disableControl]="!isEnabled">
   </form>
 
 </div>

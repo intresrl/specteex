@@ -2,7 +2,7 @@
   {{blockName}} <br>
   <form [formGroup]="boardForm" (submit)="sendMessage()" class="group">
     <div>
-      <input type="text" placeholder="Type to add" formControlName="message">
+      <input type="text" placeholder="Type to add" formControlName="message" [disableControl]="!isEnabled">
     </div>
   </form>
   <span class="highlight"></span>

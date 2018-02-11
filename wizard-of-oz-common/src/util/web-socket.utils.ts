@@ -2,6 +2,7 @@ import {WsMessage} from '../class/ws-message';
 import {ChatMessage} from '../class/chat-message';
 import {User} from '../class/user';
 import {wsPayloadEnum} from '../enum/ws-payload.enum';
+import {RetrospectiveStatus} from '../enum/retrospective-status.enum';
 
 export class WebSocketUtils {
 
@@ -16,12 +17,14 @@ export class WebSocketUtils {
     return wsMessage;
   }
 
-  public static convertObjectToPayload(payloadType: wsPayloadEnum, data: object): object {
+  public static convertObjectToPayload(payloadType: wsPayloadEnum, data: any): any {
     switch (payloadType) {
-      case wsPayloadEnum.User:
+      case wsPayloadEnum.USER:
         return User.buildFromObject(data) as User;
-      case wsPayloadEnum.ChatMessage:
+      case wsPayloadEnum.CHAT_MESSAGE:
         return ChatMessage.buildFromObject(data) as ChatMessage;
+      case wsPayloadEnum.STATUS:
+        return data as RetrospectiveStatus;
       default:
         return data;
     }

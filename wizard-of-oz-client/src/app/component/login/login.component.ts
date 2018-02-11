@@ -39,7 +39,7 @@ export class LoginComponent {
     if (this.loginForm.valid) {
       const formValue = this.loginForm.value;
       const user = User.build(formValue.nick, formValue.email, formValue.isScrumMaster);
-      const messageEvent = WebSocketUtils.buildMessageEvent(user, wsPayloadEnum.User, user);
+      const messageEvent = WebSocketUtils.buildMessageEvent(user, wsPayloadEnum.USER, user);
       this._webSocket.next(messageEvent);
       this.dataService.loginUser(user);
     }

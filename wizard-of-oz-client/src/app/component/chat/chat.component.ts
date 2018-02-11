@@ -24,7 +24,7 @@ export class ChatComponent {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
-      if (wsMessage.payloadType === wsPayloadEnum.ChatMessage) {
+      if (wsMessage.payloadType === wsPayloadEnum.CHAT_MESSAGE) {
         this._wsMessages.push(wsMessage);
       }
     });
