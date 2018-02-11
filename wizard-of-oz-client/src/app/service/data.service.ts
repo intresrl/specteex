@@ -5,12 +5,17 @@ import {User} from '../../../../wizard-of-oz-common/src/class/user';
 
 @Injectable()
 export class DataService {
-  private _currentUser: BehaviorSubject<User> = new BehaviorSubject<User>(null);
+  private _currentUserChangeEvent: BehaviorSubject<User> = new BehaviorSubject<User>(null);
+  public readonly currentUserChangeEvent = this._currentUserChangeEvent.asObservable();
 
-  public readonly currentUser = this._currentUser.asObservable();
+  private _currentUser: User;
+  get currentUser(): User {
+    return this._currentUser;
+  }
 
-  loginUser(user: object) {
-    this._currentUser.next(User.buildFromObject(user));
+  loginUser(user: User) {
+    this._currentUser = user;
+    this._currentUserChangeEvent.next(user);
   }
 
 }

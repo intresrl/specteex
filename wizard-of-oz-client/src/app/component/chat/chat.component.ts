@@ -5,6 +5,7 @@ import {Subject} from 'rxjs/Subject';
 import {WebSocketService} from '../../service/websocket.service';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {DataService} from '../../service/data.service';
 
 @Component({
   selector: 'app-chat',
@@ -19,7 +20,7 @@ export class ChatComponent {
     return this._wsMessages;
   }
 
-  constructor(private _webSocketService: WebSocketService) {
+  constructor(private _dataService: DataService, private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);

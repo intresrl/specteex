@@ -13,8 +13,8 @@
      data-masonry='{ "columnWidth": 1, "itemSelector": "." }'>
 
   <ng-container *ngFor="let wsMessage of wsMessages">
-    <!--TODO: user color and user image-->
-    <div class="post_it red post_it--profile">
+    <div class="post_it post_it--profile" [style.background-color]="wsMessage.userColor"
+         [style.background-image]="'url(/assets/images/' + wsMessage.userImage + ')'">
       {{wsMessage.payload.message}}
       <!--TODO: close-->
       <!--<div class="post_it_close"></div>-->

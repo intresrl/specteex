@@ -1,9 +1,10 @@
 import {v4 as uuidV4} from 'uuid';
 import {wsPayloadEnum} from '../enum/ws-payload.enum';
+import {User} from './user';
 
 export class WsMessage {
   private _id: string;
-  private _userId: string;
+  private _user: User;
   private _timestamp: number;
   private _payloadType: wsPayloadEnum;
   private _payload: any;
@@ -13,8 +14,8 @@ export class WsMessage {
     return this._id;
   }
 
-  get userId(): string {
-    return this._userId;
+  get user(): User {
+    return this._user;
   }
 
   get timestamp(): number {
@@ -37,21 +38,33 @@ export class WsMessage {
     return this._rawPayload;
   }
 
-  public static buildFromObject(data: string): WsMessage {
+  get userEmail(): string {
+    return this._user.email;
+  }
+
+  get userColor(): string {
+    return this._user.uiConfig.color;
+  }
+
+  get userImage(): string {
+    return this._user.uiConfig.image;
+  }
+
+  public static parseWsMessage(data: string): WsMessage {
     const message = JSON.parse(data) as WsMessage;
     const wsMessage = new WsMessage();
     wsMessage._id = message._id;
-    wsMessage._userId = message._userId;
+    wsMessage._user = User.buildFromObject(message._user);
     wsMessage._timestamp = message._timestamp;
     wsMessage._payloadType = message._payloadType;
     wsMessage._rawPayload = message._rawPayload ? message._rawPayload : message._payload;
     return wsMessage;
   }
 
-  public static build(userId: string, payloadType: wsPayloadEnum, payload: any): WsMessage {
+  public static build(user: User, payloadType: wsPayloadEnum, payload: any): WsMessage {
     const wsMessage = new WsMessage();
     wsMessage._id = uuidV4();
-    wsMessage._userId = userId;
+    wsMessage._user = user;
     wsMessage._timestamp = Date.now();
     wsMessage._payloadType = payloadType;
     wsMessage._payload = payload;

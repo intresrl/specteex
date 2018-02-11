@@ -7,6 +7,7 @@ import {CustomErrorStateMatcher} from '../../service/form.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {DataService} from '../../service/data.service';
 
 @Component({
   selector: 'app-board-block',
@@ -47,7 +48,7 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
 
   matcher = new CustomErrorStateMatcher();
 
-  constructor(private _webSocketService: WebSocketService) {
+  constructor(private _dataService: DataService, private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
@@ -73,7 +74,7 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
   public sendMessage() {
     if (this.boardForm.valid) {
       const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.boardForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
+      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
       this.boardForm.reset({board: this.blockName});
     }

@@ -5,13 +5,13 @@ import {wsPayloadEnum} from '../enum/ws-payload.enum';
 
 export class WebSocketUtils {
 
-  public static buildMessageEvent(payloadType: wsPayloadEnum, data: Object): MessageEvent {
-    const wsMessage = WsMessage.build('duque@intre.it', payloadType, data);
+  public static buildMessageEvent(user: User, payloadType: wsPayloadEnum, data: Object): MessageEvent {
+    const wsMessage = WsMessage.build(user, payloadType, data);
     return new MessageEvent('worker', {data: wsMessage});
   }
 
   public static parseMessageEvent(messageEvent: MessageEvent): WsMessage {
-    const wsMessage = WsMessage.buildFromObject(messageEvent.data);
+    const wsMessage = WsMessage.parseWsMessage(messageEvent.data);
     wsMessage.payload = this.convertObjectToPayload(wsMessage.payloadType, wsMessage.rawPayload);
     return wsMessage;
   }

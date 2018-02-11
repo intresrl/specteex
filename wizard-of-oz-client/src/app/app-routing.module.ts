@@ -17,7 +17,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
   constructor(private router: Router, private dataService: DataService) {
-    this.dataService.currentUser.subscribe(currentUser => {
+    this.dataService.currentUserChangeEvent.subscribe(currentUser => {
       if (currentUser) {
         this.router.navigate(['home']);
       } else {

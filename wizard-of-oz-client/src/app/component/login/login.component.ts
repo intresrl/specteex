@@ -8,6 +8,7 @@ import {DataService} from '../../service/data.service';
 import {WebSocketService} from '../../service/websocket.service';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {User} from '../../../../../wizard-of-oz-common/src/class/user';
 
 @Component({
   selector: 'app-login',
@@ -18,10 +19,10 @@ export class LoginComponent {
   private _webSocket: Subject<MessageEvent>;
 
   loginForm = new FormGroup({
-    nick: new FormControl('a', [
+    nick: new FormControl('spectee', [
       Validators.required
     ]),
-    email: new FormControl('a@a', [
+    email: new FormControl('spectee@intre.it', [
       Validators.required,
       Validators.email,
     ]),
@@ -36,10 +37,11 @@ export class LoginComponent {
 
   public doLogin() {
     if (this.loginForm.valid) {
-      const user = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.User, this.loginForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.User, user);
+      const formValue = this.loginForm.value;
+      const user = User.build(formValue.nick, formValue.email, formValue.isScrumMaster);
+      const messageEvent = WebSocketUtils.buildMessageEvent(user, wsPayloadEnum.User, user);
       this._webSocket.next(messageEvent);
-      this.dataService.loginUser(this.loginForm.value);
+      this.dataService.loginUser(user);
     }
   }
 

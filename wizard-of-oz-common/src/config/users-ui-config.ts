@@ -1,32 +1,47 @@
 export const userUiConfigs = [
   {
-    email: 'caglio@intre.it',
-    color: '#c997fe',
-    image: ''
+    _email: 'spectee@intre.it',
+    _color: '#c997fe',
+    _image: 'spectee.svg'
   },
   {
-    email: 'duque@intre.it',
-    color: '#ff9d96',
-    image: 'duq.png'
+    _email: 'mantovani@intre.it',
+    _color: '#ff9d96',
+    _image: 'emanuele.png'
   },
   {
-    email: 'marcato@intre.it',
-    color: '#ffc58c',
-    image: 'mar.png'
+    _email: 'mantovani@intre.it',
+    _color: '#c997fe',
+    _image: 'emanuele.png'
   },
   {
-    email: 'ranica@intre.it',
-    color: '#ffb6d2',
-    image: 'ran.png'
+    _email: 'caglio@intre.it',
+    _color: '#c997fe',
+    _image: ''
   },
   {
-    email: 'sacchi@intre.it',
-    color: '#ffe697',
-    image: 'sac.png'
+    _email: 'duque@intre.it',
+    _color: '#ff9d96',
+    _image: 'duq.png'
   },
   {
-    email: 'santacroce@intre.it',
-    color: '',
-    image: 'san.png'
+    _email: 'marcato@intre.it',
+    _color: '#ffc58c',
+    _image: 'mar.png'
+  },
+  {
+    _email: 'ranica@intre.it',
+    _color: '#ffb6d2',
+    _image: 'ran.png'
+  },
+  {
+    _email: 'sacchi@intre.it',
+    _color: '#ffe697',
+    _image: 'sac.png'
+  },
+  {
+    _email: 'santacroce@intre.it',
+    _color: '',
+    _image: 'san.png'
   }
 ];

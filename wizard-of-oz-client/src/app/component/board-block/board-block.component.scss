@@ -32,26 +32,6 @@
   opacity: 0.9;
   box-shadow: -3px -3px 9px #ddd;
   position: relative;
-
-  &.violet {
-    background-color: #c997fe;
-  }
-
-  &.orange {
-    background-color: #ffc58c;
-  }
-
-  &.pink {
-    background-color: #ffb6d2;
-  }
-
-  &.yellow {
-    background-color: #ffe697;
-  }
-
-  &.red {
-    background-color: #ff9d96;
-  }
 }
 
 .post_it:hover {
@@ -61,7 +41,7 @@
 
 .post_it_close {
   position: absolute;
-  background-image: url(/assets/images/close.svg);
+  //background-image: url(/assets/images/close.svg);
   opacity: 1;
   background-repeat: no-repeat;
   background-position: 4px 4px;
@@ -72,8 +52,6 @@
 }
 
 .post_it--profile {
-  //TODO: user image
-  background-image: url(/assets/images/emanuele.png);
   background-repeat: no-repeat;
   background-position: 4px 4px;
   padding-left: 42px;

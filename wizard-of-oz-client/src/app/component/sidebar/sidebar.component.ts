@@ -7,6 +7,7 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import {WebSocketService} from '../../service/websocket.service';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {DataService} from '../../service/data.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -21,7 +22,7 @@ export class SidebarComponent implements AfterViewInit, OnInit {
 
   matcher = new CustomErrorStateMatcher();
 
-  constructor(private _webSocketService: WebSocketService) {
+  constructor(private _dataService: DataService, private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
   }
 
@@ -40,7 +41,7 @@ export class SidebarComponent implements AfterViewInit, OnInit {
   public sendMessage() {
     if (this.chatForm.valid) {
       const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.ChatMessage, this.chatForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(wsPayloadEnum.ChatMessage, chatMessage);
+      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.ChatMessage, chatMessage);
       this._webSocket.next(messageEvent);
       this.chatForm.reset();
     }
