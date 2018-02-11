@@ -60,6 +60,6 @@ STATUS
     }
   },
   "_timestamp":1518388527350,
-  "_payloadType":2,
-  "_payload":0
+  "_payloadType":3,
+  "_payload":1
 }
