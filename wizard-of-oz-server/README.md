@@ -1,4 +1,4 @@
-# Spectee - Wizard Of Oz Server
+# Specteex - Wizard Of Oz Server
 
 This project was generated with [npm](https://github.com/npm/npm) version 5.6.0.
 

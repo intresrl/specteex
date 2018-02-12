@@ -7,7 +7,7 @@ MESSAGE 1
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -26,7 +26,7 @@ MESSAGE 2
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -45,7 +45,7 @@ MESSAGE 3
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -64,7 +64,7 @@ MESSAGE 4
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -93,7 +93,7 @@ MESSAGE 5 - NO
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -118,7 +118,7 @@ MESSAGE 5 - YES
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -137,7 +137,7 @@ MESSAGE 6
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -166,7 +166,7 @@ MESSAGE 7 - SI
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -203,7 +203,7 @@ MESSAGE 7 - NO
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -222,7 +222,7 @@ MESSAGE 8
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -241,7 +241,7 @@ MESSAGE 9
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -260,7 +260,7 @@ MESSAGE 10
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -293,7 +293,7 @@ MESSAGE 11
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -322,7 +322,7 @@ MESSAGE 12
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -351,7 +351,7 @@ MESSAGE 13
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -370,7 +370,7 @@ MESSAGE 14
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -389,7 +389,7 @@ MESSAGE 15
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -408,7 +408,7 @@ MESSAGE 17
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -427,7 +427,7 @@ MESSAGE 18
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -446,7 +446,7 @@ MESSAGE 19
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -471,7 +471,7 @@ STATUS - WRITE_NOTE
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -488,7 +488,7 @@ MESSAGE - TIMER 5 min
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -507,7 +507,7 @@ MESSAGE - TIMER 1 min
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -526,7 +526,7 @@ MESSAGE 20
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -551,7 +551,7 @@ STATUS - GROUP_NOTE
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -568,7 +568,7 @@ MESSAGE 21
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -587,7 +587,7 @@ MESSAGE 22
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -606,7 +606,7 @@ MESSAGE 23
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -629,7 +629,7 @@ MESSAGE WITH BUTTONS
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
-      "_image":"spectee.svg"
+      "_image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,

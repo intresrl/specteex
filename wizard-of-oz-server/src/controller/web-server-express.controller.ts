@@ -11,7 +11,7 @@ import {wsPayloadEnum} from '../../../wizard-of-oz-common/src/enum/ws-payload.en
 class WebServerExpressController {
   public server: any;
   private _currentStatus = RetrospectiveStatus.CHOICE_RETROSPECTIVE;
-  private _specteeUser = User.build('spectee', 'scpectee@intre.it', false);
+  private _specteexUser = User.build('specteex', 'specteex@intre.it', false);
   private _usersMessages = new Map<string, WsMessage[]>();
 
   constructor() {
@@ -22,7 +22,7 @@ class WebServerExpressController {
     wss.on('connection', (ws: WebSocket, request: http.IncomingMessage) => {
       console.log(`New connection from ${request.socket.remoteAddress}:${request.socket.remotePort}`);
 
-      const statusMessage = WsMessage.build(this._specteeUser, wsPayloadEnum.STATUS, this._currentStatus);
+      const statusMessage = WsMessage.build(this._specteexUser, wsPayloadEnum.STATUS, this._currentStatus);
       ws.send(JSON.stringify(statusMessage));
 
       ws.on('message', (message: string) => {
