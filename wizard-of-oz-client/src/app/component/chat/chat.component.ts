@@ -8,6 +8,7 @@ import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payl
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
+import {ChatMessageButton} from '../../../../../wizard-of-oz-common/src/class/chat-message-button';
 
 @Component({
   selector: 'app-chat',
@@ -39,8 +40,9 @@ export class ChatComponent {
     });
   }
 
-  public clickButton(value: string): void {
+  public clickButton(buttons: ChatMessageButton[], value: string): void {
     if (this.isEnabled) {
+      buttons.forEach(button => button.selected = button.value === value);
       const clickButtonMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.CLICK_BUTTON, value);
       const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.CLICK_BUTTON, clickButtonMessage);
       this._webSocket.next(messageEvent);

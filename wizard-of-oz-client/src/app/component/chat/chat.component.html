@@ -8,8 +8,9 @@
         {{wsMessage.payload.message}}
         <br *ngIf="wsMessage.payload.buttons">
         <ng-container *ngFor="let button of wsMessage.payload.buttons">
-          <!--TODO disable button class-->
-          <div class="chat_button" [ngClass]="isEnabled ? '' : ''" (click)="clickButton(button.value)">
+          <div class="chat_button"
+               [ngClass]="isEnabled ? (button.selected ? 'chat_button--selected' : '') : 'chat_button--disabled'"
+               (click)="clickButton(wsMessage.payload.buttons, button.value);">
             {{button.label}}
           </div>
         </ng-container>

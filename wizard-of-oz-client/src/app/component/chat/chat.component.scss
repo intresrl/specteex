@@ -137,3 +137,11 @@
   line-height: 30px;
   cursor: pointer;
 }
+
+.chat_button--disabled {
+  opacity: 0.3;
+}
+
+.chat_button--selected {
+  background-color: #0d1b28;
+}
