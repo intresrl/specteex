@@ -2,7 +2,6 @@ import * as express from 'express';
 import * as http from 'http';
 import * as WebSocket from 'ws';
 
-import {ConnectionManagerService} from '../service/connection-manager.service';
 import {RetrospectiveStatus} from '../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {User} from '../../../wizard-of-oz-common/src/class/user';
 import {ChatMessage} from '../../../wizard-of-oz-common/src/class/chat-message';
@@ -13,24 +12,31 @@ class WebServerExpressController {
   public server: any;
   private _currentStatus = RetrospectiveStatus.CHOICE_RETROSPECTIVE;
   private _specteeUser = User.build('spectee', 'scpectee@intre.it', false);
+  private _usersMessages = new Map<string, WsMessage[]>();
 
   constructor() {
     const app = express();
     const server = http.createServer(app);
     const wss = new WebSocket.Server({server});
-    const connectionManager = new ConnectionManagerService();
 
     wss.on('connection', (ws: WebSocket, request: http.IncomingMessage) => {
       console.log(`New connection from ${request.socket.remoteAddress}:${request.socket.remotePort}`);
 
-      // connectionManager.addConnection(request.socket.remoteAddress, request.socket.remotePort);
-      const wsMessage = WsMessage.build(this._specteeUser, wsPayloadEnum.STATUS, this._currentStatus);
-      ws.send(JSON.stringify(wsMessage));
+      const statusMessage = WsMessage.build(this._specteeUser, wsPayloadEnum.STATUS, this._currentStatus);
+      ws.send(JSON.stringify(statusMessage));
 
       ws.on('message', (message: string) => {
-        this.logMessagePayload(message);
+        const wsMessage = WsMessage.parseWsMessage(message);
+        this.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
+          let userMessages = this._usersMessages.get(wsMessage.userEmail);
+          if (!userMessages) {
+            userMessages = new Array<WsMessage>();
+          }
+          userMessages.push(wsMessage);
+          this._usersMessages.set(wsMessage.userEmail, userMessages);
+
           ws.send(message);
         } else {
           wss.clients.forEach(function each(client: WebSocket) {
@@ -40,21 +46,31 @@ class WebServerExpressController {
           });
         }
 
+        if (wsMessage.payloadType === wsPayloadEnum.STATUS && wsMessage.rawPayload !== this._currentStatus) {
+          if (wsMessage.rawPayload === RetrospectiveStatus.GROUP_NOTE) {
+            this._usersMessages.forEach(userMessages => {
+              userMessages.forEach(userMessage => {
+                wss.clients.forEach(client => {
+                  if (client.readyState === WebSocket.OPEN) {
+                    client.send(JSON.stringify(userMessage));
+                  }
+                });
+              });
+            });
+          }
+          this._currentStatus = wsMessage.rawPayload;
+        }
       });
 
       ws.on('close', () => {
-        // connectionManager.deleteConnection(request.socket.remoteAddress, request.socket.remotePort);
         console.log(`Close connection to ${request.socket.remoteAddress}:${request.socket.remotePort}`);
       });
-
-      // ws.send('Hi there, I am a WebSocket server');
     });
 
     this.server = server;
   }
 
-  private logMessagePayload(data: string): void {
-    const wsMessage = WsMessage.parseWsMessage(data);
+  private logMessagePayload(wsMessage: WsMessage): void {
     switch (wsMessage.payloadType) {
       case wsPayloadEnum.USER:
         console.log(`USER ${(User.buildFromObject(wsMessage.rawPayload) as User).email}`);
