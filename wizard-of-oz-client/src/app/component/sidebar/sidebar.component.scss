@@ -70,6 +70,23 @@
   mask-position: 50%;
 }
 
+.user_button {
+  height: 70px;
+  width: 70px;
+  float: right;
+  background-color: #45c2fb;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: fixed;
+  right: 0;
+  top: 0;
+  -webkit-mask: url(/assets/images/user6.svg) no-repeat 50% 50%;
+  mask: url(/assets/images/user6.svg);
+  margin-right:50px;
+  mask-repeat: no-repeat;
+  mask-position: 50%;
+}
+
 .menu_button:hover {
   background-color: black;
   cursor: pointer;
