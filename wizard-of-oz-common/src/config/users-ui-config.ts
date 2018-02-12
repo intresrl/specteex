@@ -5,9 +5,9 @@ export const userUiConfigs = [
     _image: 'spectee.svg'
   },
   {
-    _email: 'mantovani@intre.it',
-    _color: '#ff9d96',
-    _image: 'man_2x.png'
+    _email: 'bombelli@intre.it',
+    _color: '#1fae9b',
+    _image: 'san_2x.png'
   },
   {
     _email: 'caglio@intre.it',
@@ -18,6 +18,11 @@ export const userUiConfigs = [
     _email: 'duque@intre.it',
     _color: '#ff9d96',
     _image: 'duq_2x.png'
+  },
+  {
+    _email: 'mantovani@intre.it',
+    _color: '#80bc6f',
+    _image: 'man_2x.png'
   },
   {
     _email: 'marcato@intre.it',
