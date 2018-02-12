@@ -20,7 +20,6 @@
       "prefix": "app",
       "styles": [
         "styles.scss",
-        "../node_modules/bootstrap/dist/css/bootstrap.css",
         "assets/styles/flex-framework.css",
         "../node_modules/perfect-scrollbar/css/perfect-scrollbar.css"
       ],
