@@ -76,9 +76,9 @@
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
   -webkit-align-self: stretch;
   -ms-flex-item-align: stretch;
   align-self: stretch;
@@ -91,7 +91,7 @@
 }
 
 .message--user .baloon {
-  background-color: #45c2fb;
+  background-color: #70e4d5;
   right: 0;
   -webkit-order: 0;
   -ms-flex-order: 0;
@@ -114,6 +114,7 @@
 .chat_button {
   background-color: #fff;
   height: 30px;
+  padding: 0 30px;
   border-radius: 15px;
   width: 100%;
   color: #45c2fb;

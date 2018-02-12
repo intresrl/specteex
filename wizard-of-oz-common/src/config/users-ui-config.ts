@@ -7,41 +7,36 @@ export const userUiConfigs = [
   {
     _email: 'mantovani@intre.it',
     _color: '#ff9d96',
-    _image: 'emanuele.png'
-  },
-  {
-    _email: 'mantovani@intre.it',
-    _color: '#c997fe',
-    _image: 'emanuele.png'
+    _image: 'man_2x.png'
   },
   {
     _email: 'caglio@intre.it',
     _color: '#c997fe',
-    _image: ''
+    _image: 'cag_2x.png'
   },
   {
     _email: 'duque@intre.it',
     _color: '#ff9d96',
-    _image: 'duq.png'
+    _image: 'duq_2x.png'
   },
   {
     _email: 'marcato@intre.it',
     _color: '#ffc58c',
-    _image: 'mar.png'
+    _image: 'mar_2x.png'
   },
   {
     _email: 'ranica@intre.it',
     _color: '#ffb6d2',
-    _image: 'ran.png'
+    _image: 'ran_2x.png'
   },
   {
     _email: 'sacchi@intre.it',
     _color: '#ffe697',
-    _image: 'sac.png'
+    _image: 'sac_2x.png'
   },
   {
     _email: 'santacroce@intre.it',
     _color: '#ff9d96',
-    _image: 'san.png'
+    _image: 'san_2x.png'
   }
 ];
