@@ -1,4 +1,6 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component} from '@angular/core';
+import {StatusService} from '../../service/status.service';
+import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 
 @Component({
   selector: 'app-board',
@@ -7,4 +9,11 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 export class BoardComponent {
 
+  constructor(private _statusService: StatusService) {
+  }
+
+  get isEnabled(): boolean {
+    const currentStatus = this._statusService.currentStatus;
+    return currentStatus !== RetrospectiveStatus.CHOICE_RETROSPECTIVE;
+  }
 }
