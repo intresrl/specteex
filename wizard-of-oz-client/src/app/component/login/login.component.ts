@@ -19,10 +19,10 @@ export class LoginComponent {
   private _webSocket: Subject<MessageEvent>;
 
   loginForm = new FormGroup({
-    nick: new FormControl('spectee', [
+    nick: new FormControl('', [
       Validators.required
     ]),
-    email: new FormControl('spectee@intre.it', [
+    email: new FormControl('', [
       Validators.required,
       Validators.email,
     ]),
