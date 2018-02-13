@@ -2,8 +2,8 @@ MESSAGE 1
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"spectex",
-    "_email":"spectex@intre.it",
+    "_nick":"specteex",
+    "_email":"specteex@intre.it",
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
@@ -13,7 +13,7 @@ MESSAGE 1
   "_timestamp":1518388527350,
   "_payloadType":0,
   "_payload":{
-    "message":"Buongiorno, è spectex che parla"
+    "message":"Buongiorno, è Specteex che parla"
   }
 }
 
@@ -247,25 +247,6 @@ MESSAGE 9
   "_timestamp":1518388527350,
   "_payloadType":0,
   "_payload":{
-    "message":"Ho milioni di idee: conducono tutte a morte certa. [cit.]"
-  }
-}
-
-MESSAGE 10
-{
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
-    }
-  },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
     "message":"Quanto tempo avete a disposizione?",
     "buttons":[
       {
@@ -284,7 +265,7 @@ MESSAGE 10
   }
 }
 
-MESSAGE 11
+MESSAGE 10
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -313,7 +294,7 @@ MESSAGE 11
   }
 }
 
-MESSAGE 12
+MESSAGE 11
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -342,7 +323,7 @@ MESSAGE 12
   }
 }
 
-MESSAGE 13
+MESSAGE 12
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -361,7 +342,7 @@ MESSAGE 13
   }
 }
 
-MESSAGE 14
+MESSAGE 13
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -380,7 +361,7 @@ MESSAGE 14
   }
 }
 
-MESSAGE 15
+MESSAGE 14
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -399,7 +380,7 @@ MESSAGE 15
   }
 }
 
-MESSAGE 17
+MESSAGE 15
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -418,7 +399,7 @@ MESSAGE 17
   }
 }
 
-MESSAGE 18
+MESSAGE 16
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -437,7 +418,7 @@ MESSAGE 18
   }
 }
 
-MESSAGE 19
+MESSAGE 17
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
@@ -483,8 +464,8 @@ MESSAGE - TIMER 5 min
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"spectex",
-    "_email":"spectex@intre.it",
+    "_nick":"specteex",
+    "_email":"specteex@intre.it",
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
@@ -502,8 +483,8 @@ MESSAGE - TIMER 1 min
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"spectex",
-    "_email":"spectex@intre.it",
+    "_nick":"specteex",
+    "_email":"specteex@intre.it",
     "_isScrumMaster":true,
     "_uiConfig":{
       "_color":"#45c2fb",
@@ -517,7 +498,7 @@ MESSAGE - TIMER 1 min
   }
 }
 
-MESSAGE 20
+MESSAGE 18
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{

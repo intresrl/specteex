@@ -17,7 +17,7 @@ export const userUiConfigs = [
   {
     _email: 'bombelli@intre.it',
     _color: '#1fae9b',
-    _image: 'san_2x.png'
+    _image: 'bom.png'
   },
   {
     _email: 'caglio@intre.it',
@@ -81,7 +81,7 @@ export const userUiConfigs = [
   {
     _email: 'mufatti@intre.it',
     _color: '#ffc58c',
-    _image: 'mau.png'
+    _image: 'mua.png'
   },
   {
     _email: 'poggio@intre.it',
@@ -94,7 +94,7 @@ export const userUiConfigs = [
     _image: 'poz.png'
   },
   {
-    _email: 'percivaldi@intre.it',
+    _email: 'd.percivaldi@intre.it',
     _color: '#ffc58c',
     _image: 'prc.png'
   },
