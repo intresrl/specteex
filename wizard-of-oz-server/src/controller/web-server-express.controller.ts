@@ -30,14 +30,22 @@ class WebServerExpressController {
         this.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
-          let userMessages = this._usersMessages.get(wsMessage.userEmail);
-          if (!userMessages) {
-            userMessages = new Array<WsMessage>();
-          }
-          userMessages.push(wsMessage);
-          this._usersMessages.set(wsMessage.userEmail, userMessages);
+          if (wsMessage.userEmail === 'specteex@intre.it') {
+            wss.clients.forEach(function each(client: WebSocket) {
+              if (client.readyState === WebSocket.OPEN) {
+                client.send(message);
+              }
+            });
+          } else {
+            let userMessages = this._usersMessages.get(wsMessage.userEmail);
+            if (!userMessages) {
+              userMessages = new Array<WsMessage>();
+            }
+            userMessages.push(wsMessage);
+            this._usersMessages.set(wsMessage.userEmail, userMessages);
 
-          ws.send(message);
+            ws.send(message);
+          }
         } else {
           wss.clients.forEach(function each(client: WebSocket) {
             if (client.readyState === WebSocket.OPEN) {
