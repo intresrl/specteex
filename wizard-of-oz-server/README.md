@@ -25,3 +25,11 @@ Run `npm test` to execute the unit tests via [Karma](https://karma-runner.github
 ## Further help
 
 To get more help on the Angular CLI use `npm help` or go check out the [npm Documentation](https://docs.npmjs.com/).
+
+___
+
+Copyright (C)  2018  Gianni Bombelli & Emanuele Mantovani @ Intré S.r.l.
+
+[![Image](https://i.creativecommons.org/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/)
+
+This documentation is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/).
