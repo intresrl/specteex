@@ -49,7 +49,7 @@ class WebServerExpressController {
 
       ws.on('message', (message: string) => {
         const wsMessage = WsMessage.parseWsMessage(message);
-        this.logMessagePayload(wsMessage);
+        WebServerExpressController.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
           if (wsMessage.userEmail === 'specteex@intre.it') {
@@ -61,7 +61,7 @@ class WebServerExpressController {
           } else {
             let userMessages = this._usersMessages.get(wsMessage.userEmail);
             if (!userMessages) {
-              userMessages = new Array<WsMessage>();
+              userMessages = [];
             }
             userMessages.push(wsMessage);
             this._usersMessages.set(wsMessage.userEmail, userMessages);
@@ -100,7 +100,7 @@ class WebServerExpressController {
     this.server = server;
   }
 
-  private logMessagePayload(wsMessage: WsMessage): void {
+  private static logMessagePayload(wsMessage: WsMessage): void {
     switch (wsMessage.payloadType) {
       case WsPayloadEnum.USER:
         console.log(`USER ${(wsMessage.rawPayload as User).email}`);
