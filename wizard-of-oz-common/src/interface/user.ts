@@ -16,9 +16,11 @@
  *
  */
 
-export enum WsPayloadEnum {
-  CHAT_MESSAGE,
-  CLICK_BUTTON,
-  USER,
-  STATUS
+import {UiConfig} from './ui-config';
+
+export interface User {
+  readonly nick: string;
+  readonly email: string;
+  readonly isScrumMaster: boolean;
+  uiConfig?: UiConfig;
 }

@@ -16,9 +16,10 @@
  *
  */
 
-export enum WsPayloadEnum {
-  CHAT_MESSAGE,
-  CLICK_BUTTON,
-  USER,
-  STATUS
+import {ChatMessageButton} from './chat-message-button';
+
+export interface ChatMessage {
+  readonly message: string;
+  readonly board?: string;
+  readonly buttons?: ChatMessageButton[];
 }

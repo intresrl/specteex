@@ -16,9 +16,7 @@
  *
  */
 
-export enum WsPayloadEnum {
-  CHAT_MESSAGE,
-  CLICK_BUTTON,
-  USER,
-  STATUS
+export interface UiConfig {
+  readonly color: string;
+  readonly image: string;
 }

@@ -17,14 +17,15 @@
  */
 
 import {v4 as uuidV4} from 'uuid';
-import {wsPayloadEnum} from '../enum/ws-payload.enum';
-import {User} from './user';
+import {WsPayloadEnum} from '../enum/ws-payload.enum';
+import {User} from '../interface/user';
 
+// FIXME
 export class WsMessage {
-  private _id: string;
-  private _user: User;
-  private _timestamp: number;
-  private _payloadType: wsPayloadEnum;
+  private _id = '';
+  private _user = {} as User;
+  private _timestamp = 0;
+  private _payloadType = WsPayloadEnum.USER;
   private _payload: any;
   private _rawPayload: any;
 
@@ -40,7 +41,7 @@ export class WsMessage {
     return this._timestamp;
   }
 
-  get payloadType(): wsPayloadEnum {
+  get payloadType(): WsPayloadEnum {
     return this._payloadType;
   }
 
@@ -61,25 +62,25 @@ export class WsMessage {
   }
 
   get userColor(): string {
-    return this._user.uiConfig.color;
+    return this._user.uiConfig ? this._user.uiConfig.color : 'gray';
   }
 
   get userImage(): string {
-    return this._user.uiConfig.image;
+    return this._user.uiConfig ? this._user.uiConfig.image : 'question_mark.svg';
   }
 
   public static parseWsMessage(data: string): WsMessage {
     const message = JSON.parse(data) as WsMessage;
     const wsMessage = new WsMessage();
     wsMessage._id = message._id;
-    wsMessage._user = User.buildFromObject(message._user);
+    wsMessage._user = message._user as User;
     wsMessage._timestamp = message._timestamp;
     wsMessage._payloadType = message._payloadType;
     wsMessage._rawPayload = message._rawPayload ? message._rawPayload : message._payload;
     return wsMessage;
   }
 
-  public static build(user: User, payloadType: wsPayloadEnum, payload: any): WsMessage {
+  public static build(user: User, payloadType: WsPayloadEnum, payload: any): WsMessage {
     const wsMessage = new WsMessage();
     wsMessage._id = uuidV4();
     wsMessage._user = user;

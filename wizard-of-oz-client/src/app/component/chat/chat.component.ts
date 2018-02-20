@@ -22,11 +22,11 @@ import {Subject} from 'rxjs/Subject';
 
 import {WebSocketService} from '../../service/websocket.service';
 import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
-import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
-import {ChatMessageButton} from '../../../../../wizard-of-oz-common/src/class/chat-message-button';
+import {ChatMessageButton} from '../../../../../wizard-of-oz-common/src/interface/chat-message-button';
 
 @Component({
   selector: 'app-chat',
@@ -52,7 +52,7 @@ export class ChatComponent {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
-      if (wsMessage.payloadType === wsPayloadEnum.CHAT_MESSAGE) {
+      if (wsMessage.payloadType === WsPayloadEnum.CHAT_MESSAGE) {
         this._wsMessages.push(wsMessage);
       }
     });
@@ -61,8 +61,8 @@ export class ChatComponent {
   public clickButton(buttons: ChatMessageButton[], value: string): void {
     if (this.isEnabled) {
       buttons.forEach(button => button.selected = button.value === value);
-      const clickButtonMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.CLICK_BUTTON, value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.CLICK_BUTTON, clickButtonMessage);
+      const clickButtonMessage = WebSocketUtils.convertObjectToPayload(WsPayloadEnum.CLICK_BUTTON, value);
+      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CLICK_BUTTON, clickButtonMessage);
       this._webSocket.next(messageEvent);
     }
   }

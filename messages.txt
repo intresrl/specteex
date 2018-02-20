@@ -2,12 +2,12 @@ MESSAGE 1
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -21,12 +21,12 @@ MESSAGE 2
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -40,12 +40,12 @@ MESSAGE 3
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -59,12 +59,12 @@ MESSAGE 4
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -88,12 +88,12 @@ MESSAGE 5 - NO
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -113,12 +113,12 @@ MESSAGE 5 - YES
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -132,12 +132,12 @@ MESSAGE 6
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -161,12 +161,12 @@ MESSAGE 7 - SI
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -198,12 +198,12 @@ MESSAGE 7 - NO
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -217,12 +217,12 @@ MESSAGE 8
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -236,12 +236,12 @@ MESSAGE 9
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -269,12 +269,12 @@ MESSAGE 10
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -298,12 +298,12 @@ MESSAGE 11
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -327,12 +327,12 @@ MESSAGE 12
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -346,12 +346,12 @@ MESSAGE 13
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -365,12 +365,12 @@ MESSAGE 14
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -384,12 +384,12 @@ MESSAGE 15
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -403,12 +403,12 @@ MESSAGE 16
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -422,12 +422,12 @@ MESSAGE 17
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -447,12 +447,12 @@ STATUS - WRITE_NOTE
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -464,12 +464,12 @@ MESSAGE - TIMER 5 min
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -483,12 +483,12 @@ MESSAGE - TIMER 1 min
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -502,12 +502,12 @@ MESSAGE 18
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -527,12 +527,12 @@ STATUS - GROUP_NOTE
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -544,12 +544,12 @@ MESSAGE 21
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -563,12 +563,12 @@ MESSAGE 22
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -582,12 +582,12 @@ MESSAGE 23
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,
@@ -605,12 +605,12 @@ MESSAGE WITH BUTTONS
 {
   "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
   "_timestamp":1518388527350,

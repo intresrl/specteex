@@ -18,157 +18,157 @@
 
 export const userUiConfigs = [
   {
-    _email: 'specteex@intre.it',
-    _color: '#45c2fb',
-    _image: 'specteex.svg'
+    email: 'specteex@intre.it',
+    color: '#45c2fb',
+    image: 'specteex.svg'
   },
   {
-    _email: 'aceti@intre.it',
-    _color: '#1fae9b',
-    _image: 'ace.png'
+    email: 'aceti@intre.it',
+    color: '#1fae9b',
+    image: 'ace.png'
   },
   {
-    _email: 'ballabio@intre.it',
-    _color: '#1fae9b',
-    _image: 'blb.png'
+    email: 'ballabio@intre.it',
+    color: '#1fae9b',
+    image: 'blb.png'
   },
   {
-    _email: 'bombelli@intre.it',
-    _color: '#1fae9b',
-    _image: 'bom.png'
+    email: 'bombelli@intre.it',
+    color: '#1fae9b',
+    image: 'bom.png'
   },
   {
-    _email: 'caglio@intre.it',
-    _color: '#c997fe',
-    _image: 'cag_2x.png'
+    email: 'caglio@intre.it',
+    color: '#c997fe',
+    image: 'cag_2x.png'
   },
   {
-    _email: 'chierichetti@intre.it',
-    _color: '#c997fe',
-    _image: 'chi.png'
+    email: 'chierichetti@intre.it',
+    color: '#c997fe',
+    image: 'chi.png'
   },
   {
-    _email: 'cricenti@intre.it',
-    _color: '#c997fe',
-    _image: 'cri.png'
+    email: 'cricenti@intre.it',
+    color: '#c997fe',
+    image: 'cri.png'
   },
   {
-    _email: 'cruciani@intre.it',
-    _color: '#c997fe',
-    _image: 'cru.png'
+    email: 'cruciani@intre.it',
+    color: '#c997fe',
+    image: 'cru.png'
   },
   {
-    _email: 'duque@intre.it',
-    _color: '#ff9d96',
-    _image: 'duq_2x.png'
+    email: 'duque@intre.it',
+    color: '#ff9d96',
+    image: 'duq_2x.png'
   },  {
-    _email: 'volpi@intre.it',
-    _color: '#ff9d96',
-    _image: 'fox.png'
+    email: 'volpi@intre.it',
+    color: '#ff9d96',
+    image: 'fox.png'
   },
   {
-    _email: 'ghislandi@intre.it',
-    _color: '#ff9d96',
-    _image: 'ghi.png'
+    email: 'ghislandi@intre.it',
+    color: '#ff9d96',
+    image: 'ghi.png'
   },
   {
-    _email: 'grieco@intre.it',
-    _color: '#ff9d96',
-    _image: 'gri.png'
+    email: 'grieco@intre.it',
+    color: '#ff9d96',
+    image: 'gri.png'
   },
   {
-    _email: 'maggioni@intre.it',
-    _color: '#ff9d96',
-    _image: 'mag.png'
+    email: 'maggioni@intre.it',
+    color: '#ff9d96',
+    image: 'mag.png'
   },
   {
-    _email: 'mantovani@intre.it',
-    _color: '#80bc6f',
-    _image: 'man_2x.png'
+    email: 'mantovani@intre.it',
+    color: '#80bc6f',
+    image: 'man_2x.png'
   },
   {
-    _email: 'marcato@intre.it',
-    _color: '#ffc58c',
-    _image: 'mar_2x.png'
+    email: 'marcato@intre.it',
+    color: '#ffc58c',
+    image: 'mar_2x.png'
   },
   {
-    _email: 'mandelli@intre.it',
-    _color: '#ffc58c',
-    _image: 'mnd.png'
+    email: 'mandelli@intre.it',
+    color: '#ffc58c',
+    image: 'mnd.png'
   },
   {
-    _email: 'mufatti@intre.it',
-    _color: '#ffc58c',
-    _image: 'mua.png'
+    email: 'mufatti@intre.it',
+    color: '#ffc58c',
+    image: 'mua.png'
   },
   {
-    _email: 'poggio@intre.it',
-    _color: '#ffc58c',
-    _image: 'pog.png'
+    email: 'poggio@intre.it',
+    color: '#ffc58c',
+    image: 'pog.png'
   },
   {
-    _email: 'pozzoni@intre.it',
-    _color: '#ffc58c',
-    _image: 'poz.png'
+    email: 'pozzoni@intre.it',
+    color: '#ffc58c',
+    image: 'poz.png'
   },
   {
-    _email: 'd.percivaldi@intre.it',
-    _color: '#ffc58c',
-    _image: 'prc.png'
+    email: 'd.percivaldi@intre.it',
+    color: '#ffc58c',
+    image: 'prc.png'
   },
   {
-    _email: 'ranica@intre.it',
-    _color: '#ffb6d2',
-    _image: 'ran_2x.png'
+    email: 'ranica@intre.it',
+    color: '#ffb6d2',
+    image: 'ran_2x.png'
   },
   {
-    _email: 'rigillo@intre.it',
-    _color: '#ffb6d2',
-    _image: 'rig.png'
+    email: 'rigillo@intre.it',
+    color: '#ffb6d2',
+    image: 'rig.png'
   },
   {
-    _email: 'rissoglio@intre.it',
-    _color: '#ffb6d2',
-    _image: 'ris.png'
+    email: 'rissoglio@intre.it',
+    color: '#ffb6d2',
+    image: 'ris.png'
   },
   {
-    _email: 'roggero@intre.it',
-    _color: '#ffb6d2',
-    _image: 'rog.png'
+    email: 'roggero@intre.it',
+    color: '#ffb6d2',
+    image: 'rog.png'
   },
   {
-    _email: 'rotondi@intre.it',
-    _color: '#ffb6d2',
-    _image: 'rot.png'
+    email: 'rotondi@intre.it',
+    color: '#ffb6d2',
+    image: 'rot.png'
   },
   {
-    _email: 'sacchi@intre.it',
-    _color: '#ffe697',
-    _image: 'sac_2x.png'
+    email: 'sacchi@intre.it',
+    color: '#ffe697',
+    image: 'sac_2x.png'
   },
   {
-    _email: 'salvi@intre.it',
-    _color: '#ffe697',
-    _image: 'sal.png'
+    email: 'salvi@intre.it',
+    color: '#ffe697',
+    image: 'sal.png'
   },
   {
-    _email: 'santacroce@intre.it',
-    _color: '#ff9d96',
-    _image: 'san_2x.png'
+    email: 'santacroce@intre.it',
+    color: '#ff9d96',
+    image: 'san_2x.png'
   },
   {
-    _email: 'saracino@intre.it',
-    _color: '#ff9d96',
-    _image: 'sar.png'
+    email: 'saracino@intre.it',
+    color: '#ff9d96',
+    image: 'sar.png'
   },
   {
-    _email: 'sironi@intre.it',
-    _color: '#ff9d96',
-    _image: 'sir.png'
+    email: 'sironi@intre.it',
+    color: '#ff9d96',
+    image: 'sir.png'
   },
   {
-    _email: 'testa@intre.it',
-    _color: '#ff9d96',
-    _image: 'tes.png'
+    email: 'testa@intre.it',
+    color: '#ff9d96',
+    image: 'tes.png'
   }
 ];

@@ -18,12 +18,15 @@
 
 import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-
-import {User} from '../../../../wizard-of-oz-common/src/class/user';
-import {WebSocketService} from './websocket.service';
 import {Subject} from 'rxjs/Subject';
+
+import {userUiConfigs} from '../../../../wizard-of-oz-common/src/config/users-ui-config';
+
+import {UiConfig} from '../../../../wizard-of-oz-common/src/interface/ui-config';
+import {User} from '../../../../wizard-of-oz-common/src/interface/user';
+import {WebSocketService} from './websocket.service';
 import {WebSocketUtils} from '../../../../wizard-of-oz-common/src/util/web-socket.utils';
-import {wsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {WsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Injectable()
 export class DataService {
@@ -42,9 +45,9 @@ export class DataService {
   }
 
   loginUser(data: object) {
-    const userData = data as User;
-    const user = User.build(userData.nick, userData.email, userData.isScrumMaster);
-    const messageEvent = WebSocketUtils.buildMessageEvent(user, wsPayloadEnum.USER, user);
+    const user = data as User;
+    user.uiConfig = userUiConfigs.find(userUiConfig => userUiConfig.email === user.email) as UiConfig;
+    const messageEvent = WebSocketUtils.buildMessageEvent(user, WsPayloadEnum.USER, user);
     this._webSocket.next(messageEvent);
 
     this._currentUser = user;
