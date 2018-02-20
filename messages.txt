@@ -593,7 +593,7 @@ MESSAGE 23
   "_timestamp":1518388527350,
   "_payloadType":0,
   "_payload":{
-    "message":"Specttex intendeva dire 'guidarvi in una retrospettiva', non è che sia un lavoro molto gratificante... e poi tutti i registri sono programmati per avere un carattere gioioso e solare."
+    "message":"Specteex intendeva dire 'guidarvi in una retrospettiva', non è che sia un lavoro molto gratificante... e poi tutti i registri sono programmati per avere un carattere gioioso e solare."
   }
 }
 
