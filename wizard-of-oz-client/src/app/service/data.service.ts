@@ -20,9 +20,15 @@ import {Injectable} from '@angular/core';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
 
 import {User} from '../../../../wizard-of-oz-common/src/class/user';
+import {WebSocketService} from './websocket.service';
+import {Subject} from 'rxjs/Subject';
+import {WebSocketUtils} from '../../../../wizard-of-oz-common/src/util/web-socket.utils';
+import {wsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Injectable()
 export class DataService {
+  private _webSocket: Subject<MessageEvent>;
+
   private _currentUserChangeEvent: BehaviorSubject<User> = new BehaviorSubject<User>(null);
   public readonly currentUserChangeEvent = this._currentUserChangeEvent.asObservable();
 
@@ -31,7 +37,16 @@ export class DataService {
     return this._currentUser;
   }
 
-  loginUser(user: User) {
+  constructor(private _webSocketService: WebSocketService) {
+    this._webSocket = this._webSocketService.connect();
+  }
+
+  loginUser(data: object) {
+    const userData = data as User;
+    const user = User.build(userData.nick, userData.email, userData.isScrumMaster);
+    const messageEvent = WebSocketUtils.buildMessageEvent(user, wsPayloadEnum.USER, user);
+    this._webSocket.next(messageEvent);
+
     this._currentUser = user;
     this._currentUserChangeEvent.next(user);
   }
