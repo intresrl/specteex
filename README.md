@@ -1,4 +1,4 @@
-# Spectee
+# Specteex
 
 ## Wizard Of Oz
 
