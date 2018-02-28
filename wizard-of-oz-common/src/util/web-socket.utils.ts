@@ -26,29 +26,7 @@ import {ClickButton} from '../interface/click-button';
 export class WebSocketUtils {
 
   public static buildMessageEvent(user: User, payloadType: WsPayloadEnum, data: Object): MessageEvent {
-    const wsMessage = WsMessage.build(user, payloadType, data);
+    const wsMessage = new WsMessage(user, payloadType, data);
     return new MessageEvent('worker', {data: wsMessage});
   }
-
-  public static parseMessageEvent(messageEvent: MessageEvent): WsMessage {
-    const wsMessage = WsMessage.parseWsMessage(messageEvent.data);
-    wsMessage.payload = this.convertObjectToPayload(wsMessage.payloadType, wsMessage.rawPayload);
-    return wsMessage;
-  }
-
-  public static convertObjectToPayload(payloadType: WsPayloadEnum, data: any): any {
-    switch (payloadType) {
-      case WsPayloadEnum.USER:
-        return data as User;
-      case WsPayloadEnum.CHAT_MESSAGE:
-        return data as ChatMessage;
-      case WsPayloadEnum.CLICK_BUTTON:
-        return data as ClickButton;
-      case WsPayloadEnum.STATUS:
-        return data as RetrospectiveStatus;
-      default:
-        return data;
-    }
-  }
-
 }

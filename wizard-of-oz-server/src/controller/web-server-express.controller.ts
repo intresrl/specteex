@@ -44,11 +44,11 @@ class WebServerExpressController {
     wss.on('connection', (ws: WebSocket, request: http.IncomingMessage) => {
       console.log(`New connection from ${request.socket.remoteAddress}:${request.socket.remotePort}`);
 
-      const statusMessage = WsMessage.build(this._specteexUser, WsPayloadEnum.STATUS, this._currentStatus);
+      const statusMessage = new WsMessage(this._specteexUser, WsPayloadEnum.STATUS, this._currentStatus);
       ws.send(JSON.stringify(statusMessage));
 
       ws.on('message', (message: string) => {
-        const wsMessage = WsMessage.parseWsMessage(message);
+        const wsMessage: WsMessage = JSON.parse(message);
         WebServerExpressController.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
@@ -76,8 +76,8 @@ class WebServerExpressController {
           });
         }
 
-        if (wsMessage.payloadType === WsPayloadEnum.STATUS && wsMessage.rawPayload !== this._currentStatus) {
-          if (wsMessage.rawPayload === RetrospectiveStatus.GROUP_NOTE) {
+        if (wsMessage.payloadType === WsPayloadEnum.STATUS && wsMessage.payload !== this._currentStatus) {
+          if (wsMessage.payload === RetrospectiveStatus.GROUP_NOTE) {
             this._usersMessages.forEach(userMessages => {
               userMessages.forEach(userMessage => {
                 wss.clients.forEach(client => {
@@ -88,7 +88,7 @@ class WebServerExpressController {
               });
             });
           }
-          this._currentStatus = wsMessage.rawPayload;
+          this._currentStatus = wsMessage.payload;
         }
       });
 
@@ -103,17 +103,17 @@ class WebServerExpressController {
   private static logMessagePayload(wsMessage: WsMessage): void {
     switch (wsMessage.payloadType) {
       case WsPayloadEnum.USER:
-        console.log(`USER ${(wsMessage.rawPayload as User).email}`);
+        console.log(`USER ${(wsMessage.payload as User).email}`);
         break;
       case WsPayloadEnum.CHAT_MESSAGE:
-        const chatMessage = wsMessage.rawPayload as ChatMessage;
+        const chatMessage = wsMessage.payload as ChatMessage;
         console.log(`CHAT_MESSAGE ${wsMessage.userEmail}: ${JSON.stringify(chatMessage)}`);
         break;
       case WsPayloadEnum.CLICK_BUTTON:
-        console.log(`CLICK_BUTTON ${wsMessage.userEmail}: ${wsMessage.rawPayload._value}`);
+        console.log(`CLICK_BUTTON ${wsMessage.userEmail}: ${wsMessage.payload.value}`);
         break;
       case WsPayloadEnum.STATUS:
-        console.log(`STATUS ${wsMessage.userEmail}: ${wsMessage.rawPayload}`);
+        console.log(`STATUS ${wsMessage.userEmail}: ${wsMessage.payload}`);
         break;
       default:
         console.log(`${wsMessage.userEmail}: ${wsMessage}`);

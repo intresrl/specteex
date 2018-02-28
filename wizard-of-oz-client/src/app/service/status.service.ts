@@ -23,6 +23,7 @@ import {WebSocketUtils} from '../../../../wizard-of-oz-common/src/util/web-socke
 import {WsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {WebSocketService} from './websocket.service';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
+import {WsMessage, IWsMessage} from '../../../../wizard-of-oz-common/src/class/ws-message';
 
 @Injectable()
 export class StatusService {
@@ -39,7 +40,7 @@ export class StatusService {
   constructor(private _webSocketService: WebSocketService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
-      const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
+      const wsMessage = WsMessage.fromJSON(JSON.parse(messageEvent.data) as IWsMessage);
       if (wsMessage.payloadType === WsPayloadEnum.STATUS) {
         this._currentStatus = wsMessage.payload;
         this._currentStatusChangeEvent.next(wsMessage.payload);

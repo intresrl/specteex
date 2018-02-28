@@ -27,6 +27,8 @@ import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {ChatMessageButton} from '../../../../../wizard-of-oz-common/src/interface/chat-message-button';
+import {ClickButton} from '../../../../../wizard-of-oz-common/src/interface/click-button';
+import {WsMessage, IWsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
 
 @Component({
   selector: 'app-chat',
@@ -51,7 +53,7 @@ export class ChatComponent {
   constructor(private _dataService: DataService, private _webSocketService: WebSocketService, private _statusService: StatusService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
-      const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
+      const wsMessage = WsMessage.fromJSON(JSON.parse(messageEvent.data) as IWsMessage);
       if (wsMessage.payloadType === WsPayloadEnum.CHAT_MESSAGE) {
         this._wsMessages.push(wsMessage);
       }
@@ -60,8 +62,8 @@ export class ChatComponent {
 
   public clickButton(buttons: ChatMessageButton[], value: string): void {
     if (this.isEnabled) {
-      buttons.forEach(button => button.selected = button.value === value);
-      const clickButtonMessage = WebSocketUtils.convertObjectToPayload(WsPayloadEnum.CLICK_BUTTON, value);
+      const selectedButton = buttons.filter(button => button.value === value);
+      const clickButtonMessage = {buttonId: selectedButton[0].id, value: value} as ClickButton;
       const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CLICK_BUTTON, clickButtonMessage);
       this._webSocket.next(messageEvent);
     }
