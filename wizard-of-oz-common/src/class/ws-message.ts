@@ -28,7 +28,6 @@ export interface IWsMessage {
   readonly payload: any;
 }
 
-// FIXME
 export class WsMessage implements IWsMessage {
 
   readonly id: string;
@@ -63,9 +62,4 @@ export class WsMessage implements IWsMessage {
       timestamp: new Date(json.timestamp)
     });
   }
-
-  toJSON(): IWsMessage {
-    return Object.assign({}, this);
-  }
-
 }
