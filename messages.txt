@@ -1,6 +1,5 @@
 MESSAGE 1
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -10,7 +9,6 @@ MESSAGE 1
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Buongiorno, è Specteex che parla"
@@ -19,7 +17,6 @@ MESSAGE 1
 
 MESSAGE 2
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -29,7 +26,6 @@ MESSAGE 2
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Specteex è il miglior chatbot per retrospettive del mondo!"
@@ -38,7 +34,6 @@ MESSAGE 2
 
 MESSAGE 3
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -48,7 +43,6 @@ MESSAGE 3
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"In questa fase iniziale può scrivere solo lo scrum master"
@@ -57,7 +51,6 @@ MESSAGE 3
 
 MESSAGE 4
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -67,7 +60,6 @@ MESSAGE 4
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Siete pronti per iniziare, ci siete tutti?",
@@ -86,7 +78,6 @@ MESSAGE 4
 
 MESSAGE 5 - NO
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -96,7 +87,6 @@ MESSAGE 5 - NO
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Fai sapere a Specteex quando siete pronti",
@@ -111,7 +101,6 @@ MESSAGE 5 - NO
 
 MESSAGE 5 - YES
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -121,7 +110,6 @@ MESSAGE 5 - YES
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Molto bene, Specteex è davvero felice di questo!"
@@ -130,7 +118,6 @@ MESSAGE 5 - YES
 
 MESSAGE 6
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -140,7 +127,6 @@ MESSAGE 6
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Specteex conosce diverse retrospettive: starfish, sailboat, stop start continue, KALM. Avete già un'idea di quale retrospettiva fare tra queste?",
@@ -159,7 +145,6 @@ MESSAGE 6
 
 MESSAGE 7 - SI
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -169,7 +154,6 @@ MESSAGE 7 - SI
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Quale vorreste fare?",
@@ -196,7 +180,6 @@ MESSAGE 7 - SI
 
 MESSAGE 7 - NO
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -206,7 +189,6 @@ MESSAGE 7 - NO
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Malissimo, allora Specteex vi farà alcune domande per capire quello di cui avete bisogno"
@@ -215,7 +197,6 @@ MESSAGE 7 - NO
 
 MESSAGE 8
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -225,7 +206,6 @@ MESSAGE 8
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Ho milioni di idee: conducono tutte a morte certa. [cit.]"
@@ -234,7 +214,6 @@ MESSAGE 8
 
 MESSAGE 9
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -244,7 +223,6 @@ MESSAGE 9
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Quanto tempo avete a disposizione?",
@@ -267,7 +245,6 @@ MESSAGE 9
 
 MESSAGE 10
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -277,7 +254,6 @@ MESSAGE 10
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"E' una retrospettiva periodica o saltuaria?",
@@ -296,7 +272,6 @@ MESSAGE 10
 
 MESSAGE 11
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -306,7 +281,6 @@ MESSAGE 11
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Volete fare una restrospettiva per un nuovo progetto o per uno in corso?",
@@ -325,7 +299,6 @@ MESSAGE 11
 
 MESSAGE 12
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -335,7 +308,6 @@ MESSAGE 12
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Specteex sta elaborando i dati......"
@@ -344,7 +316,6 @@ MESSAGE 12
 
 MESSAGE 13
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -354,7 +325,6 @@ MESSAGE 13
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Potrei calcolare le tue probabilità di sopravvivenza, ma non ti piacerebbe. [cit.]"
@@ -363,7 +333,6 @@ MESSAGE 13
 
 MESSAGE 14
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -373,7 +342,6 @@ MESSAGE 14
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"La retrospettiva giusta per voi è Starfish!"
@@ -382,7 +350,6 @@ MESSAGE 14
 
 MESSAGE 15
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -392,7 +359,6 @@ MESSAGE 15
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"In Starfish ci sono 5 riquadri: nel riquadro 'Less' inserirete le pratiche, vostre o del team, da ridurre, in 'Keep' quelle da mantenere, in 'More' quelle da fare più di frequente, in 'Start' quelle da introdurre e in 'Stop' quelle da interrompere"
@@ -401,7 +367,6 @@ MESSAGE 15
 
 MESSAGE 16
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -411,7 +376,6 @@ MESSAGE 16
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Potete scrivere le note direttamente nei riquadri, oppure scrivendo nella chat globale: #nome_riquadro: blablablabla"
@@ -420,7 +384,6 @@ MESSAGE 16
 
 MESSAGE 17
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -430,7 +393,6 @@ MESSAGE 17
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"OK, Specteex è pronto a iniziare, e voi?",
@@ -445,7 +407,6 @@ MESSAGE 17
 
 STATUS - WRITE_NOTE
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -455,14 +416,12 @@ STATUS - WRITE_NOTE
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":3,
   "payload":1
 }
 
 MESSAGE - TIMER 5 min
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -472,7 +431,6 @@ MESSAGE - TIMER 5 min
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Fiery the angels fell; deep thunder rolled around their shores; burning with the fires of Orc. [cit.] - Mancano 5 min..."
@@ -481,7 +439,6 @@ MESSAGE - TIMER 5 min
 
 MESSAGE - TIMER 1 min
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -491,7 +448,6 @@ MESSAGE - TIMER 1 min
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"I've seen things you people wouldn't believe. [cit.] - Il tempo sta finendo, manca solo 1 min..."
@@ -500,7 +456,6 @@ MESSAGE - TIMER 1 min
 
 MESSAGE 18
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -510,7 +465,6 @@ MESSAGE 18
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Il tempo è scaduto. Adesso Specteex vi mostra tutte le note che avete scritto",
@@ -525,7 +479,6 @@ MESSAGE 18
 
 STATUS - GROUP_NOTE
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -535,14 +488,12 @@ STATUS - GROUP_NOTE
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":3,
   "payload":2
 }
 
 MESSAGE 21
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -552,7 +503,6 @@ MESSAGE 21
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Ora identificate gruppi di note relative allo stesso argomento e identificate possibili azioni da compiere."
@@ -561,7 +511,6 @@ MESSAGE 21
 
 MESSAGE 22
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -571,7 +520,6 @@ MESSAGE 22
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Ah, fate pure...! Io sto qui con un cervello grosso quanto un pianeta e mi chiedono di accompagnarvi sul ponte. Me lo chiamate un lavoro glorificante? [cit.]"
@@ -580,7 +528,6 @@ MESSAGE 22
 
 MESSAGE 23
 {
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
   "user":{
     "nick":"specteex",
     "email":"specteex@intre.it",
@@ -590,42 +537,8 @@ MESSAGE 23
       "image":"specteex.svg"
     }
   },
-  "timestamp":1518388527350,
   "payloadType":0,
   "payload":{
     "message":"Specttex intendeva dire 'guidarvi in una retrospettiva', non è che sia un lavoro molto gratificante... e poi tutti i registri sono programmati per avere un carattere gioioso e solare."
-  }
-}
-
-
-
-
-
-MESSAGE WITH BUTTONS
-{
-  "id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "user":{
-    "nick":"specteex",
-    "email":"specteex@intre.it",
-    "isScrumMaster":true,
-    "uiConfig":{
-      "color":"#45c2fb",
-      "image":"specteex.svg"
-    }
-  },
-  "timestamp":1518388527350,
-  "payloadType":0,
-  "payload":{
-    "message":"ciao",
-    "buttons":[
-      {
-        "label":"Si",
-        "value":"yes"
-      },
-      {
-        "label":"No",
-        "value":"no"
-      }
-    ]
   }
 }
