@@ -26,7 +26,7 @@ import {ChatMessage} from '../../../wizard-of-oz-common/src/interface/chat-messa
 import {RetrospectiveStatus} from '../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {UiConfig} from '../../../wizard-of-oz-common/src/interface/ui-config';
 import {User} from '../../../wizard-of-oz-common/src/interface/user';
-import {WsMessage} from '../../../wizard-of-oz-common/src/class/ws-message';
+import {IWsMessage, WsMessage} from '../../../wizard-of-oz-common/src/class/ws-message';
 import {WsPayloadEnum} from '../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 class WebServerExpressController {
@@ -48,11 +48,11 @@ class WebServerExpressController {
       ws.send(JSON.stringify(statusMessage));
 
       ws.on('message', (message: string) => {
-        const wsMessage: WsMessage = JSON.parse(message);
+        const wsMessage: WsMessage = WsMessage.fromJSON(JSON.parse(message) as IWsMessage);
         WebServerExpressController.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
-          if (wsMessage.userEmail === 'specteex@intre.it') {
+          if (wsMessage.userEmail === this._specteexUser.email) {
             wss.clients.forEach(function each(client: WebSocket) {
               if (client.readyState === WebSocket.OPEN) {
                 client.send(message);
