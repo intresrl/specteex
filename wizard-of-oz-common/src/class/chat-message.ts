@@ -34,8 +34,8 @@ export class ChatMessage implements IChatMessage {
 
   constructor(message: string, board?: string, buttons?: ChatMessageButton[]) {
     const regExpMatches = ChatMessage.messageRegExp.exec(message);
-    this.message = regExpMatches[3];
-    this.board = (board ? board : regExpMatches[2]);
+    this.message = regExpMatches ? regExpMatches[3] : message;
+    this.board = board ? board : (regExpMatches ? regExpMatches[2] : undefined);
     this.buttons = buttons;
   }
 
