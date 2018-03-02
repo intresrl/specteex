@@ -28,7 +28,7 @@ import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {IWsMessage, WsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
-import {ChatMessage} from '../../../../../wizard-of-oz-common/src/interface/chat-message';
+import {ChatMessage} from '../../../../../wizard-of-oz-common/src/class/chat-message';
 
 @Component({
   selector: 'app-board-block',
@@ -80,7 +80,7 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
       const wsMessage = WsMessage.fromJSON(JSON.parse(messageEvent.data) as IWsMessage);
-      if (wsMessage.payloadType === WsPayloadEnum.CHAT_MESSAGE && this.blockName.toLowerCase() === wsMessage.payload.board) {
+      if (wsMessage.payloadType === WsPayloadEnum.CHAT_MESSAGE && this.blockName.toLowerCase() === wsMessage.payload.board.toLowerCase()) {
         this._wsMessages.push(wsMessage);
       }
     });
@@ -101,7 +101,7 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
 
   public sendMessage() {
     if (this.boardForm.valid) {
-      const chatMessage = this.boardForm.value as ChatMessage;
+      const chatMessage = new ChatMessage(this.boardForm.value.message, this.boardForm.value.board);
       const messageEvent = WebSocketService.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.boardForm.reset({board: this.blockName});

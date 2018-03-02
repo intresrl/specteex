@@ -16,10 +16,27 @@
  *
  */
 
-import {ChatMessageButton} from './chat-message-button';
+import {ChatMessageButton} from '../interface/chat-message-button';
 
-export interface ChatMessage {
+export interface IChatMessage {
   readonly message: string;
   readonly board?: string;
   readonly buttons?: ChatMessageButton[];
+}
+
+export class ChatMessage implements IChatMessage {
+  public static readonly messageRegExp = new RegExp('^(#([\\w\\d]+):)?\\s?([\\w\\W]+)$');
+
+  readonly message: string;
+  readonly board?: string;
+  readonly buttons?: ChatMessageButton[];
+
+
+  constructor(message: string, board?: string, buttons?: ChatMessageButton[]) {
+    const regExpMatches = ChatMessage.messageRegExp.exec(message);
+    this.message = regExpMatches[3];
+    this.board = (board ? board : regExpMatches[2]);
+    this.buttons = buttons;
+  }
+
 }

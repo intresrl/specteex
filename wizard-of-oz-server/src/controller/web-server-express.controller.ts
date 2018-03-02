@@ -22,7 +22,7 @@ import * as WebSocket from 'ws';
 
 import {userUiConfigs} from '../../../wizard-of-oz-common/src/config/users-ui-config';
 
-import {ChatMessage} from '../../../wizard-of-oz-common/src/interface/chat-message';
+import {ChatMessage} from '../../../wizard-of-oz-common/src/class/chat-message';
 import {RetrospectiveStatus} from '../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {UiConfig} from '../../../wizard-of-oz-common/src/interface/ui-config';
 import {User} from '../../../wizard-of-oz-common/src/interface/user';
