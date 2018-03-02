@@ -17,11 +17,8 @@
  */
 
 import {WsMessage} from '../class/ws-message';
-import {ChatMessage} from '../interface/chat-message';
 import {User} from '../interface/user';
 import {WsPayloadEnum} from '../enum/ws-payload.enum';
-import {RetrospectiveStatus} from '../enum/retrospective-status.enum';
-import {ClickButton} from '../interface/click-button';
 
 export class WebSocketUtils {
 

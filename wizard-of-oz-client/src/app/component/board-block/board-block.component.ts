@@ -28,7 +28,7 @@ import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payl
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
-import {WsMessage, IWsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
+import {IWsMessage, WsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
 import {ChatMessage} from '../../../../../wizard-of-oz-common/src/interface/chat-message';
 
 @Component({

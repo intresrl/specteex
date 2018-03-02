@@ -28,7 +28,7 @@ import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {ChatMessageButton} from '../../../../../wizard-of-oz-common/src/interface/chat-message-button';
 import {ClickButton} from '../../../../../wizard-of-oz-common/src/interface/click-button';
-import {WsMessage, IWsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
+import {IWsMessage, WsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
 
 @Component({
   selector: 'app-chat',

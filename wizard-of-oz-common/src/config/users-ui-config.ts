@@ -61,7 +61,7 @@ export const userUiConfigs = [
     email: 'duque@intre.it',
     color: '#ff9d96',
     image: 'duq_2x.png'
-  },  {
+  }, {
     email: 'volpi@intre.it',
     color: '#ff9d96',
     image: 'fox.png'

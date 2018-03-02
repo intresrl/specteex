@@ -19,11 +19,10 @@
 import {Injectable} from '@angular/core';
 import {RetrospectiveStatus} from '../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
 import {Subject} from 'rxjs/Subject';
-import {WebSocketUtils} from '../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {WsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {WebSocketService} from './websocket.service';
 import {BehaviorSubject} from 'rxjs/BehaviorSubject';
-import {WsMessage, IWsMessage} from '../../../../wizard-of-oz-common/src/class/ws-message';
+import {IWsMessage, WsMessage} from '../../../../wizard-of-oz-common/src/class/ws-message';
 
 @Injectable()
 export class StatusService {
