@@ -23,7 +23,6 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import {WebSocketService} from '../../service/websocket.service';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
@@ -103,7 +102,7 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
   public sendMessage() {
     if (this.boardForm.valid) {
       const chatMessage = this.boardForm.value as ChatMessage;
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
+      const messageEvent = WebSocketService.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.boardForm.reset({board: this.blockName});
     }

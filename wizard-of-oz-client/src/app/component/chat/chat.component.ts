@@ -21,7 +21,6 @@ import {Component} from '@angular/core';
 import {Subject} from 'rxjs/Subject';
 
 import {WebSocketService} from '../../service/websocket.service';
-import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
@@ -64,7 +63,10 @@ export class ChatComponent {
     if (this.isEnabled) {
       const selectedButton = buttons.filter(button => button.value === value);
       const clickButtonMessage = {buttonId: selectedButton[0].id, value: value} as ClickButton;
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CLICK_BUTTON, clickButtonMessage);
+      const messageEvent = WebSocketService.buildMessageEvent(
+        this._dataService.currentUser,
+        WsPayloadEnum.CLICK_BUTTON,
+        clickButtonMessage);
       this._webSocket.next(messageEvent);
     }
   }

@@ -25,7 +25,6 @@ import {userUiConfigs} from '../../../../wizard-of-oz-common/src/config/users-ui
 import {UiConfig} from '../../../../wizard-of-oz-common/src/interface/ui-config';
 import {User} from '../../../../wizard-of-oz-common/src/interface/user';
 import {WebSocketService} from './websocket.service';
-import {WebSocketUtils} from '../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {WsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 @Injectable()
@@ -47,7 +46,7 @@ export class DataService {
   loginUser(data: object) {
     const user = data as User;
     user.uiConfig = userUiConfigs.find(userUiConfig => userUiConfig.email === user.email) as UiConfig;
-    const messageEvent = WebSocketUtils.buildMessageEvent(user, WsPayloadEnum.USER, user);
+    const messageEvent = WebSocketService.buildMessageEvent(user, WsPayloadEnum.USER, user);
     this._webSocket.next(messageEvent);
 
     this._currentUser = user;

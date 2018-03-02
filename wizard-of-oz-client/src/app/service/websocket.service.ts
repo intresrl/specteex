@@ -20,12 +20,20 @@ import {Injectable} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
 import {Observer} from 'rxjs/Observer';
 import {Subject} from 'rxjs/Subject';
+import {User} from '../../../../wizard-of-oz-common/src/interface/user';
+import {WsPayloadEnum} from '../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {WsMessage} from '../../../../wizard-of-oz-common/src/class/ws-message';
 
 Injectable();
 
 export class WebSocketService {
   private subject = new Subject<MessageEvent>();
   private isWsConnected = false;
+
+  public static buildMessageEvent(user: User, payloadType: WsPayloadEnum, data: Object): MessageEvent {
+    const wsMessage = new WsMessage(user, payloadType, data);
+    return new MessageEvent('worker', {data: wsMessage});
+  }
 
   public connect(): Subject<MessageEvent> {
     if (!this.isWsConnected) {

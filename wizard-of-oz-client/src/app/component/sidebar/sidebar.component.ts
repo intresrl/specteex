@@ -23,7 +23,6 @@ import {Subject} from 'rxjs/Subject';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import {WebSocketService} from '../../service/websocket.service';
-import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
 import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
@@ -69,7 +68,7 @@ export class SidebarComponent implements AfterViewInit, OnInit {
   public sendMessage() {
     if (this.chatForm.valid) {
       const chatMessage = this.chatForm.value as ChatMessage;
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
+      const messageEvent = WebSocketService.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.chatForm.reset();
     }
