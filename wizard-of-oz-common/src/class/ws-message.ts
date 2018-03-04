@@ -17,76 +17,49 @@
  */
 
 import {v4 as uuidV4} from 'uuid';
-import {wsPayloadEnum} from '../enum/ws-payload.enum';
-import {User} from './user';
+import {WsPayloadEnum} from '../enum/ws-payload.enum';
+import {User} from '../interface/user';
 
-export class WsMessage {
-  private _id: string;
-  private _user: User;
-  private _timestamp: number;
-  private _payloadType: wsPayloadEnum;
-  private _payload: any;
-  private _rawPayload: any;
+export interface IWsMessage {
+  readonly id: string;
+  readonly user: User;
+  readonly timestamp: number;
+  readonly payloadType: WsPayloadEnum;
+  readonly payload: any;
+}
 
-  get id(): string {
-    return this._id;
-  }
+export class WsMessage implements IWsMessage {
 
-  get user(): User {
-    return this._user;
-  }
+  readonly id: string;
+  readonly user: User;
+  readonly timestamp: number;
+  readonly payloadType: WsPayloadEnum;
+  readonly payload: any;
 
-  get timestamp(): number {
-    return this._timestamp;
-  }
-
-  get payloadType(): wsPayloadEnum {
-    return this._payloadType;
-  }
-
-  get payload(): any {
-    return this._payload;
-  }
-
-  set payload(value: any) {
-    this._payload = value;
-  }
-
-  get rawPayload(): any {
-    return this._rawPayload;
+  get userColor(): string {
+    return this.user.uiConfig ? this.user.uiConfig.color : 'gray';
   }
 
   get userEmail(): string {
-    return this._user.email;
-  }
-
-  get userColor(): string {
-    return this._user.uiConfig.color;
+    return this.user.email;
   }
 
   get userImage(): string {
-    return this._user.uiConfig.image;
+    return this.user.uiConfig ? this.user.uiConfig.image : 'question_mark.svg';
   }
 
-  public static parseWsMessage(data: string): WsMessage {
-    const message = JSON.parse(data) as WsMessage;
-    const wsMessage = new WsMessage();
-    wsMessage._id = message._id;
-    wsMessage._user = User.buildFromObject(message._user);
-    wsMessage._timestamp = message._timestamp;
-    wsMessage._payloadType = message._payloadType;
-    wsMessage._rawPayload = message._rawPayload ? message._rawPayload : message._payload;
-    return wsMessage;
+  constructor(user: User, payloadType: WsPayloadEnum, payload: any) {
+    this.id = uuidV4();
+    this.user = user;
+    this.timestamp = Date.now();
+    this.payloadType = payloadType;
+    this.payload = payload;
   }
 
-  public static build(user: User, payloadType: wsPayloadEnum, payload: any): WsMessage {
-    const wsMessage = new WsMessage();
-    wsMessage._id = uuidV4();
-    wsMessage._user = user;
-    wsMessage._timestamp = Date.now();
-    wsMessage._payloadType = payloadType;
-    wsMessage._payload = payload;
-    return wsMessage;
+  static fromJSON(json: IWsMessage): WsMessage {
+    const wsMessage = Object.create(WsMessage.prototype);
+    return Object.assign(wsMessage, json, {
+      timestamp: new Date(json.timestamp)
+    });
   }
 }
-

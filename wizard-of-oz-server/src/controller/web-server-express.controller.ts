@@ -20,16 +20,20 @@ import * as express from 'express';
 import * as http from 'http';
 import * as WebSocket from 'ws';
 
-import {RetrospectiveStatus} from '../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
-import {User} from '../../../wizard-of-oz-common/src/class/user';
+import {userUiConfigs} from '../../../wizard-of-oz-common/src/config/users-ui-config';
+
 import {ChatMessage} from '../../../wizard-of-oz-common/src/class/chat-message';
-import {WsMessage} from '../../../wizard-of-oz-common/src/class/ws-message';
-import {wsPayloadEnum} from '../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {RetrospectiveStatus} from '../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
+import {UiConfig} from '../../../wizard-of-oz-common/src/interface/ui-config';
+import {User} from '../../../wizard-of-oz-common/src/interface/user';
+import {IWsMessage, WsMessage} from '../../../wizard-of-oz-common/src/class/ws-message';
+import {WsPayloadEnum} from '../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 
 class WebServerExpressController {
   public server: any;
   private _currentStatus = RetrospectiveStatus.CHOICE_RETROSPECTIVE;
-  private _specteexUser = User.build('specteex', 'specteex@intre.it', false);
+  private _specteexUiConfig = userUiConfigs.find(userUiConfig => userUiConfig.email === 'specteex@intre.it') as UiConfig;
+  private _specteexUser = {nick: 'specteex', email: 'specteex@intre.it', isScrumMaster: false, uiConfig: this._specteexUiConfig} as User;
   private _usersMessages = new Map<string, WsMessage[]>();
 
   constructor() {
@@ -40,15 +44,15 @@ class WebServerExpressController {
     wss.on('connection', (ws: WebSocket, request: http.IncomingMessage) => {
       console.log(`New connection from ${request.socket.remoteAddress}:${request.socket.remotePort}`);
 
-      const statusMessage = WsMessage.build(this._specteexUser, wsPayloadEnum.STATUS, this._currentStatus);
+      const statusMessage = new WsMessage(this._specteexUser, WsPayloadEnum.STATUS, this._currentStatus);
       ws.send(JSON.stringify(statusMessage));
 
       ws.on('message', (message: string) => {
-        const wsMessage = WsMessage.parseWsMessage(message);
-        this.logMessagePayload(wsMessage);
+        const wsMessage: WsMessage = WsMessage.fromJSON(JSON.parse(message) as IWsMessage);
+        WebServerExpressController.logMessagePayload(wsMessage);
 
         if (this._currentStatus === RetrospectiveStatus.WRITE_NOTE) {
-          if (wsMessage.userEmail === 'specteex@intre.it') {
+          if (wsMessage.userEmail === this._specteexUser.email) {
             wss.clients.forEach(function each(client: WebSocket) {
               if (client.readyState === WebSocket.OPEN) {
                 client.send(message);
@@ -57,7 +61,7 @@ class WebServerExpressController {
           } else {
             let userMessages = this._usersMessages.get(wsMessage.userEmail);
             if (!userMessages) {
-              userMessages = new Array<WsMessage>();
+              userMessages = [];
             }
             userMessages.push(wsMessage);
             this._usersMessages.set(wsMessage.userEmail, userMessages);
@@ -72,8 +76,8 @@ class WebServerExpressController {
           });
         }
 
-        if (wsMessage.payloadType === wsPayloadEnum.STATUS && wsMessage.rawPayload !== this._currentStatus) {
-          if (wsMessage.rawPayload === RetrospectiveStatus.GROUP_NOTE) {
+        if (wsMessage.payloadType === WsPayloadEnum.STATUS && wsMessage.payload !== this._currentStatus) {
+          if (wsMessage.payload === RetrospectiveStatus.GROUP_NOTE) {
             this._usersMessages.forEach(userMessages => {
               userMessages.forEach(userMessage => {
                 wss.clients.forEach(client => {
@@ -84,7 +88,7 @@ class WebServerExpressController {
               });
             });
           }
-          this._currentStatus = wsMessage.rawPayload;
+          this._currentStatus = wsMessage.payload;
         }
       });
 
@@ -96,20 +100,20 @@ class WebServerExpressController {
     this.server = server;
   }
 
-  private logMessagePayload(wsMessage: WsMessage): void {
+  private static logMessagePayload(wsMessage: WsMessage): void {
     switch (wsMessage.payloadType) {
-      case wsPayloadEnum.USER:
-        console.log(`USER ${(User.buildFromObject(wsMessage.rawPayload) as User).email}`);
+      case WsPayloadEnum.USER:
+        console.log(`USER ${(wsMessage.payload as User).email}`);
         break;
-      case wsPayloadEnum.CHAT_MESSAGE:
-        const chatMessage = ChatMessage.buildFromObject(wsMessage.rawPayload) as ChatMessage;
+      case WsPayloadEnum.CHAT_MESSAGE:
+        const chatMessage = wsMessage.payload as ChatMessage;
         console.log(`CHAT_MESSAGE ${wsMessage.userEmail}: ${JSON.stringify(chatMessage)}`);
         break;
-      case wsPayloadEnum.CLICK_BUTTON:
-        console.log(`CLICK_BUTTON ${wsMessage.userEmail}: ${wsMessage.rawPayload._value}`);
+      case WsPayloadEnum.CLICK_BUTTON:
+        console.log(`CLICK_BUTTON ${wsMessage.userEmail}: ${wsMessage.payload.value}`);
         break;
-      case wsPayloadEnum.STATUS:
-        console.log(`STATUS ${wsMessage.userEmail}: ${wsMessage.rawPayload}`);
+      case WsPayloadEnum.STATUS:
+        console.log(`STATUS ${wsMessage.userEmail}: ${wsMessage.payload}`);
         break;
       default:
         console.log(`${wsMessage.userEmail}: ${wsMessage}`);

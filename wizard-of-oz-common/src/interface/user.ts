@@ -16,14 +16,11 @@
  *
  */
 
-import server from './controller/web-server-express.controller';
+import {UiConfig} from './ui-config';
 
-const port = process.env.PORT || 3000;
-
-server.listen(port, (err: any) => {
-  if (err) {
-    return console.log(err);
-  }
-
-  return console.log(`server is listening on ${port}`);
-});
+export interface User {
+  readonly nick: string;
+  readonly email: string;
+  readonly isScrumMaster: boolean;
+  uiConfig?: UiConfig;
+}

@@ -23,11 +23,11 @@ import {Subject} from 'rxjs/Subject';
 import PerfectScrollbar from 'perfect-scrollbar';
 
 import {WebSocketService} from '../../service/websocket.service';
-import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
-import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
+import {ChatMessage} from '../../../../../wizard-of-oz-common/src/class/chat-message';
 
 @Component({
   selector: 'app-sidebar',
@@ -67,8 +67,8 @@ export class SidebarComponent implements AfterViewInit, OnInit {
 
   public sendMessage() {
     if (this.chatForm.valid) {
-      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.CHAT_MESSAGE, this.chatForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.CHAT_MESSAGE, chatMessage);
+      const chatMessage = new ChatMessage(this.chatForm.value.message);
+      const messageEvent = WebSocketService.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.chatForm.reset();
     }

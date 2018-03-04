@@ -23,11 +23,12 @@ import PerfectScrollbar from 'perfect-scrollbar';
 import {WebSocketService} from '../../service/websocket.service';
 import {CustomErrorStateMatcher} from '../../service/form.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
-import {WebSocketUtils} from '../../../../../wizard-of-oz-common/src/util/web-socket.utils';
-import {wsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
+import {WsPayloadEnum} from '../../../../../wizard-of-oz-common/src/enum/ws-payload.enum';
 import {DataService} from '../../service/data.service';
 import {StatusService} from '../../service/status.service';
 import {RetrospectiveStatus} from '../../../../../wizard-of-oz-common/src/enum/retrospective-status.enum';
+import {IWsMessage, WsMessage} from '../../../../../wizard-of-oz-common/src/class/ws-message';
+import {ChatMessage} from '../../../../../wizard-of-oz-common/src/class/chat-message';
 
 @Component({
   selector: 'app-board-block',
@@ -78,8 +79,8 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
   constructor(private _dataService: DataService, private _webSocketService: WebSocketService, private _statusService: StatusService) {
     this._webSocket = this._webSocketService.connect();
     this._webSocket.subscribe(messageEvent => {
-      const wsMessage = WebSocketUtils.parseMessageEvent(messageEvent);
-      if (wsMessage.payloadType === wsPayloadEnum.CHAT_MESSAGE && this.blockName.toLowerCase() === wsMessage.payload.board) {
+      const wsMessage = WsMessage.fromJSON(JSON.parse(messageEvent.data) as IWsMessage);
+      if (wsMessage.payloadType === WsPayloadEnum.CHAT_MESSAGE && this.blockName.toLowerCase() === wsMessage.payload.board.toLowerCase()) {
         this._wsMessages.push(wsMessage);
       }
     });
@@ -100,8 +101,8 @@ export class BoardBlockComponent implements AfterViewInit, OnInit {
 
   public sendMessage() {
     if (this.boardForm.valid) {
-      const chatMessage = WebSocketUtils.convertObjectToPayload(wsPayloadEnum.CHAT_MESSAGE, this.boardForm.value);
-      const messageEvent = WebSocketUtils.buildMessageEvent(this._dataService.currentUser, wsPayloadEnum.CHAT_MESSAGE, chatMessage);
+      const chatMessage = new ChatMessage(this.boardForm.value.message, this.boardForm.value.board);
+      const messageEvent = WebSocketService.buildMessageEvent(this._dataService.currentUser, WsPayloadEnum.CHAT_MESSAGE, chatMessage);
       this._webSocket.next(messageEvent);
       this.boardForm.reset({board: this.blockName});
     }

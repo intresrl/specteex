@@ -16,31 +16,27 @@
  *
  */
 
-import {ChatMessageButton} from './chat-message-button';
+import {ChatMessageButton} from '../interface/chat-message-button';
 
-export class ChatMessage {
+export interface IChatMessage {
+  readonly message: string;
+  readonly board?: string;
+  readonly buttons?: ChatMessageButton[];
+}
+
+export class ChatMessage implements IChatMessage {
   public static readonly messageRegExp = new RegExp('^(#([\\w\\d]+):)?\\s?([\\w\\W]+)$');
-  message: string;
-  board?: string;
-  buttons?: ChatMessageButton[];
 
-  public static buildFromObject(data: object): ChatMessage {
-    const chatMessageData = data as ChatMessage;
-    const chatMessage = new ChatMessage();
-    const regExpMatches = this.messageRegExp.exec(chatMessageData.message);
-    const board = chatMessageData.board ? chatMessageData.board : regExpMatches[2];
-    chatMessage.board = board ? board.toLowerCase() : undefined;
-    chatMessage.message = regExpMatches[3];
-    if (chatMessageData.buttons) {
-      chatMessage.buttons = ChatMessageButton.buildFromObject(chatMessageData.buttons);
-    }
-    return chatMessage;
+  readonly message: string;
+  readonly board?: string;
+  readonly buttons?: ChatMessageButton[];
+
+
+  constructor(message: string, board?: string, buttons?: ChatMessageButton[]) {
+    const regExpMatches = ChatMessage.messageRegExp.exec(message);
+    this.message = regExpMatches ? regExpMatches[3] : message;
+    this.board = board ? board : (regExpMatches ? regExpMatches[2] : undefined);
+    this.buttons = buttons;
   }
 
-  public static build(message: string, board: string): ChatMessage {
-    const chatMessage = new ChatMessage();
-    chatMessage.message = message;
-    chatMessage.board = board;
-    return chatMessage;
-  }
 }

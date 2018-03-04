@@ -16,7 +16,7 @@
  *
  */
 
-export enum wsPayloadEnum {
+export enum WsPayloadEnum {
   CHAT_MESSAGE,
   CLICK_BUTTON,
   USER,

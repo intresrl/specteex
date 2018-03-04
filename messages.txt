@@ -1,84 +1,76 @@
 MESSAGE 1
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Buongiorno, è Specteex che parla"
   }
 }
 
 MESSAGE 2
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Specteex è il miglior chatbot per retrospettive del mondo!"
   }
 }
 
 MESSAGE 3
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"In questa fase iniziale può scrivere solo lo scrum master"
   }
 }
 
 MESSAGE 4
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Siete pronti per iniziare, ci siete tutti?",
     "buttons":[
       {
-        "_label":"Si",
-        "_value":"yes"
+        "label":"Si",
+        "value":"yes"
       },
       {
-        "_label":"No",
-        "_value":"no"
+        "label":"No",
+        "value":"no"
       }
     ]
   }
@@ -86,24 +78,22 @@ MESSAGE 4
 
 MESSAGE 5 - NO
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Fai sapere a Specteex quando siete pronti",
     "buttons":[
       {
-        "_label":"Siamo pronti!",
-        "_value":"yes"
+        "label":"Siamo pronti!",
+        "value":"yes"
       }
     ]
   }
@@ -111,47 +101,43 @@ MESSAGE 5 - NO
 
 MESSAGE 5 - YES
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Molto bene, Specteex è davvero felice di questo!"
   }
 }
 
 MESSAGE 6
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Specteex conosce diverse retrospettive: starfish, sailboat, stop start continue, KALM. Avete già un'idea di quale retrospettiva fare tra queste?",
     "buttons":[
       {
-        "_label":"Si",
-        "_value":"yes"
+        "label":"Si",
+        "value":"yes"
       },
       {
-        "_label":"No",
-        "_value":"no"
+        "label":"No",
+        "value":"no"
       }
     ]
   }
@@ -159,36 +145,34 @@ MESSAGE 6
 
 MESSAGE 7 - SI
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Quale vorreste fare?",
     "buttons":[
       {
-        "_label":"Starfish",
-        "_value":"starfish"
+        "label":"Starfish",
+        "value":"starfish"
       },
       {
-        "_label":"Sailboat",
-        "_value":"sailboat"
+        "label":"Sailboat",
+        "value":"sailboat"
       },
       {
-        "_label":"Start Stop Continue",
-        "_value":"ssc"
+        "label":"Start Stop Continue",
+        "value":"ssc"
       },
       {
-        "_label":"KALM",
-        "_value":"KALM"
+        "label":"KALM",
+        "value":"KALM"
       }
     ]
   }
@@ -196,70 +180,64 @@ MESSAGE 7 - SI
 
 MESSAGE 7 - NO
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Malissimo, allora Specteex vi farà alcune domande per capire quello di cui avete bisogno"
   }
 }
 
 MESSAGE 8
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Ho milioni di idee: conducono tutte a morte certa. [cit.]"
   }
 }
 
 MESSAGE 9
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Quanto tempo avete a disposizione?",
     "buttons":[
       {
-        "_label":"30 minuti",
-        "_value":"30"
+        "label":"30 minuti",
+        "value":"30"
       },
       {
-        "_label":"60 minuti",
-        "_value":"60"
+        "label":"60 minuti",
+        "value":"60"
       },
       {
-        "_label":"90 minuti",
-        "_value":"90"
+        "label":"90 minuti",
+        "value":"90"
       }
     ]
   }
@@ -267,28 +245,26 @@ MESSAGE 9
 
 MESSAGE 10
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"E' una retrospettiva periodica o saltuaria?",
     "buttons":[
       {
-        "_label":"Periodica",
-        "_value":"periodica"
+        "label":"Periodica",
+        "value":"periodica"
       },
       {
-        "_label":"Saltuaria",
-        "_value":"saltuaria"
+        "label":"Saltuaria",
+        "value":"saltuaria"
       }
     ]
   }
@@ -296,28 +272,26 @@ MESSAGE 10
 
 MESSAGE 11
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Volete fare una restrospettiva per un nuovo progetto o per uno in corso?",
     "buttons":[
       {
-        "_label":"Nuovo",
-        "_value":"nuovo"
+        "label":"Nuovo",
+        "value":"nuovo"
       },
       {
-        "_label":"In corso",
-        "_value":"in_corso"
+        "label":"In corso",
+        "value":"in_corso"
       }
     ]
   }
@@ -325,119 +299,107 @@ MESSAGE 11
 
 MESSAGE 12
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Specteex sta elaborando i dati......"
   }
 }
 
 MESSAGE 13
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Potrei calcolare le tue probabilità di sopravvivenza, ma non ti piacerebbe. [cit.]"
   }
 }
 
 MESSAGE 14
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"La retrospettiva giusta per voi è Starfish!"
   }
 }
 
 MESSAGE 15
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"In Starfish ci sono 5 riquadri: nel riquadro 'Less' inserirete le pratiche, vostre o del team, da ridurre, in 'Keep' quelle da mantenere, in 'More' quelle da fare più di frequente, in 'Start' quelle da introdurre e in 'Stop' quelle da interrompere"
   }
 }
 
 MESSAGE 16
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Potete scrivere le note direttamente nei riquadri, oppure scrivendo nella chat globale: #nome_riquadro: blablablabla"
   }
 }
 
 MESSAGE 17
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"OK, Specteex è pronto a iniziare, e voi?",
     "buttons":[
       {
-        "_label":"Siamo pronti!",
-        "_value":"start"
+        "label":"Siamo pronti!",
+        "value":"start"
       }
     ]
   }
@@ -445,79 +407,71 @@ MESSAGE 17
 
 STATUS - WRITE_NOTE
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":3,
-  "_payload":1
+  "payloadType":3,
+  "payload":1
 }
 
 MESSAGE - TIMER 5 min
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Fiery the angels fell; deep thunder rolled around their shores; burning with the fires of Orc. [cit.] - Mancano 5 min..."
   }
 }
 
 MESSAGE - TIMER 1 min
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"I've seen things you people wouldn't believe. [cit.] - Il tempo sta finendo, manca solo 1 min..."
   }
 }
 
 MESSAGE 18
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Il tempo è scaduto. Adesso Specteex vi mostra tutte le note che avete scritto",
     "buttons":[
       {
-        "_label":"Siamo pronti!",
-        "_value":"start"
+        "label":"Siamo pronti!",
+        "value":"start"
       }
     ]
   }
@@ -525,107 +479,66 @@ MESSAGE 18
 
 STATUS - GROUP_NOTE
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":3,
-  "_payload":2
+  "payloadType":3,
+  "payload":2
 }
 
 MESSAGE 21
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Ora identificate gruppi di note relative allo stesso argomento e identificate possibili azioni da compiere."
   }
 }
 
 MESSAGE 22
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Ah, fate pure...! Io sto qui con un cervello grosso quanto un pianeta e mi chiedono di accompagnarvi sul ponte. Me lo chiamate un lavoro glorificante? [cit.]"
   }
 }
 
 MESSAGE 23
 {
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
+  "user":{
+    "nick":"specteex",
+    "email":"specteex@intre.it",
+    "isScrumMaster":true,
+    "uiConfig":{
+      "color":"#45c2fb",
+      "image":"specteex.svg"
     }
   },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
+  "payloadType":0,
+  "payload":{
     "message":"Specteex intendeva dire 'guidarvi in una retrospettiva', non è che sia un lavoro molto gratificante... e poi tutti i registri sono programmati per avere un carattere gioioso e solare."
-  }
-}
-
-
-
-
-
-MESSAGE WITH BUTTONS
-{
-  "_id":"207732a5-5944-45c8-bbc7-6932e38dbeec",
-  "_user":{
-    "_nick":"specteex",
-    "_email":"specteex@intre.it",
-    "_isScrumMaster":true,
-    "_uiConfig":{
-      "_color":"#45c2fb",
-      "_image":"specteex.svg"
-    }
-  },
-  "_timestamp":1518388527350,
-  "_payloadType":0,
-  "_payload":{
-    "message":"ciao",
-    "buttons":[
-      {
-        "_label":"Si",
-        "_value":"yes"
-      },
-      {
-        "_label":"No",
-        "_value":"no"
-      }
-    ]
   }
 }
