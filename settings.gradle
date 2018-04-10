@@ -1,0 +1,4 @@
+rootProject.name = 'specteex'
+
+include 'wizard-of-oz-client'
+include 'chatbot'
